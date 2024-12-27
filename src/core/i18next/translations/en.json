@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Home",
+        "greeting": "Hi {{name}}!"
+    },
+    "countries":{
+        "region":"Region",
+        "capital":"Capital",
+        "population":"Population",
+        "languages":"Languages",
+        "area":"Area"
+    }
+        
+}

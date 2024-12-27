@@ -1,0 +1,14 @@
+{
+    "home": {
+        "title": "Inicio",
+        "greeting": "¡Hola {{name}}!"
+    },
+    "countries":{
+        "region":"Región",
+        "capital":"Capital",
+        "population":"Población",
+        "languages":"Idiomas",
+        "area":"Área"
+    }
+        
+}
