@@ -1,0 +1,10 @@
+//
+//  Debug.xcconfig
+//  qdance
+//
+//  Created by Walter Lambardi on 08/09/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"
