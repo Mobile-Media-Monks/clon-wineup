@@ -1,3 +1,4 @@
+import { User } from '../@types/models/User';
 import ZustandDataStore from './commons';
 
 export type TokenDataStoreState = {
@@ -14,4 +15,13 @@ export type CounterDataStore = ZustandDataStore<{
 }> & {
   getCounter(): number;
   setCounter(count: number): void;
+};
+
+export type UserDataStoreState = {
+  user?: User;
+};
+
+export type UserDataStore = ZustandDataStore<UserDataStoreState> & {
+  getUser(): User | undefined;
+  setUser(user: User): void;
 };
