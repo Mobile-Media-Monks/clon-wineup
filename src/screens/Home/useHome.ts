@@ -9,6 +9,15 @@ export const useHome = () => {
   const counter = repositories.counter.getCounter();
 
   useEffect(() => {
+    // repositories.user
+    //   .loginWithEmail('email', 'password')
+    //   .then(user => {
+    //     console.log('user', user);
+    //   })
+    //   .catch(error => {
+    //     console.error('Error in loginWithEmail:', error);
+    //   });
+
     /**
      * Gets all countries from the API and transforms the response
      * into Country objects to be used in the Home screen.
