@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { getAllCountries } from '@/core/rest/services/countries';
 import { transformCountries } from '@/core/transformers/countryTransformer';
 import Country from '@/core/@types/models/Country';
+import repositories from '@/core/repositories';
 
 export const useHome = () => {
   const [countries, setCountries] = useState<Country[]>([]);
+  const counter = repositories.counter.getCounter();
 
   useEffect(() => {
     /**
@@ -25,7 +27,24 @@ export const useHome = () => {
     getCountries();
   }, []);
 
+  const saveToken = useCallback(() => {
+    repositories.token.saveToken(`Walter ${new Date().getTime()}`);
+  }, []);
+
+  const getToken = useCallback(async () => {
+    const token = await repositories.token.getToken();
+    console.log('token', token);
+  }, []);
+
+  const setCounter = useCallback(() => {
+    repositories.counter.setCounter(counter + 1);
+  }, [counter]);
+
   return {
     countries,
+    saveToken,
+    getToken,
+    counter,
+    setCounter,
   };
 };
