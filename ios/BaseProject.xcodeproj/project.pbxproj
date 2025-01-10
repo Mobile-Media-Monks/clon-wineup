@@ -15,10 +15,11 @@
 		1796EFF13CF94816ABEDD2BF /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61BE73D2CBBA454F938C44AD /* Quicksand-Regular.ttf */; };
 		34315F2C51D2066573C22E1F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		3A231067F082454CBD183664 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7AA36AF043E4293ABA5C5D2 /* Quicksand-Medium.ttf */; };
+		6D5AC82680855CF1BC9E563D /* Pods_BaseProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9466C0D9A706C06A4C491C81 /* Pods_BaseProject.framework */; };
 		7A7EF04AA44F4CB5A0C6604C /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDDFB4C195A049B999C52CC5 /* Quicksand-Light.ttf */; };
+		7D2EB32DFE9296B790F7D1BD /* Pods_BaseProject_BaseProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EBD5ACD7CF7A2E2275AB1C8 /* Pods_BaseProject_BaseProjectTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C786F85E9116EB50E84BB989 /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1BE41AE07F01F97CD449CC /* libPods-BaseProject.a */; };
-		F4DA7339E7673FAE4C7A059A /* libPods-BaseProject-BaseProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B21C64D71C43DD22A69589 /* libPods-BaseProject-BaseProjectTests.a */; };
+		97E3FE122D282CC300FCAE82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97E3FE112D282CC300FCAE82 /* GoogleService-Info.plist */; };
 		FA462D960BD24B96A9AF36BC /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D550133DD10449049F5CD3C8 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +37,6 @@
 		00E356EE1AD99517003FC87E /* BaseProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
-		025487AE40950555236BD757 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BaseProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = BaseProject/AppDelegate.mm; sourceTree = "<group>"; };
@@ -44,48 +44,36 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BaseProject/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BaseProject/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = BaseProject/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		1918A12BCD699B326C5FBA34 /* Pods-BaseProject.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.production.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.production.xcconfig"; sourceTree = "<group>"; };
-		3132E3AA0EFD7BC6A022F973 /* Pods-BaseProject.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.stagingrelease.xcconfig"; sourceTree = "<group>"; };
-		4F52CD52A64B25D351111426 /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5AB30CCF8E235ECDE3A1EA34 /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.staging.xcconfig"; sourceTree = "<group>"; };
+		1EBD5ACD7CF7A2E2275AB1C8 /* Pods_BaseProject_BaseProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject_BaseProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D88649A9A277A51B9B0CDED /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		386462EFF430E80CD54B9667 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; sourceTree = "<group>"; };
+		55B4E98DCC0DD81F12E667DA /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		5EC2F82DD654B6B1BE515C78 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stores.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stores.xcconfig"; sourceTree = "<group>"; };
 		5FF9BB6F6BCC4BCF9152A3AA /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-SemiBold.ttf"; path = "../src/assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		61BE73D2CBBA454F938C44AD /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Regular.ttf"; path = "../src/assets/fonts/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
-		6A00563D07DD07A49DA6ACF5 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6651B30381458ECDFE1A95E7 /* Pods-BaseProject.stores.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.stores.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.stores.xcconfig"; sourceTree = "<group>"; };
+		697F026E29FA96459C32750D /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.staging.xcconfig"; sourceTree = "<group>"; };
+		7497D95CF83A198FB801C801 /* Pods-BaseProject.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.staging.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BaseProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A4A94312BC2B9AF80B03ABDE /* Pods-BaseProject-BaseProjectTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.production.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.production.xcconfig"; sourceTree = "<group>"; };
+		9466C0D9A706C06A4C491C81 /* Pods_BaseProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaseProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97E3FE112D282CC300FCAE82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A79E5DF0AE32E4AE486FCE8D /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; sourceTree = "<group>"; };
 		A7AA36AF043E4293ABA5C5D2 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Medium.ttf"; path = "../src/assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
-		A7B21C64D71C43DD22A69589 /* libPods-BaseProject-BaseProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject-BaseProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB2A276D346C82517447CB2D /* Pods-BaseProject.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.staging.xcconfig"; sourceTree = "<group>"; };
-		BB72B4870BFF70DB3BB1E622 /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; sourceTree = "<group>"; };
-		CA1BE41AE07F01F97CD449CC /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBB68FADD48B739CC18D1355 /* Pods-BaseProject.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.productionrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.productionrelease.xcconfig"; sourceTree = "<group>"; };
+		AE016074C638C95FFD8450FA /* Pods-BaseProject.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.stagingrelease.xcconfig"; sourceTree = "<group>"; };
 		CDDFB4C195A049B999C52CC5 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Light.ttf"; path = "../src/assets/fonts/Quicksand-Light.ttf"; sourceTree = "<group>"; };
-		CEE2C8D95D26C37F51FCA28F /* Pods-BaseProject.stores.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.stores.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.stores.xcconfig"; sourceTree = "<group>"; };
-		D4CE512692183179DEF431D1 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stores.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stores.xcconfig"; sourceTree = "<group>"; };
 		D550133DD10449049F5CD3C8 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Bold.ttf"; path = "../src/assets/fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F421B91A662C6101A09EDBD8 /* Pods-BaseProject.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.productionrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.productionrelease.xcconfig"; sourceTree = "<group>"; };
+		F7575BC39F2525AEEDEC4F46 /* Pods-BaseProject.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.production.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.production.xcconfig"; sourceTree = "<group>"; };
+		FFCE7EF539899DB9C231A3BA /* Pods-BaseProject-BaseProjectTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.production.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.production.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		58B19EF32D08BD1100B035F6 /* Configuration */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		00E356EB1AD99517003FC87E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4DA7339E7673FAE4C7A059A /* libPods-BaseProject-BaseProjectTests.a in Frameworks */,
+				7D2EB32DFE9296B790F7D1BD /* Pods_BaseProject_BaseProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C786F85E9116EB50E84BB989 /* libPods-BaseProject.a in Frameworks */,
+				6D5AC82680855CF1BC9E563D /* Pods_BaseProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				CA1BE41AE07F01F97CD449CC /* libPods-BaseProject.a */,
-				A7B21C64D71C43DD22A69589 /* libPods-BaseProject-BaseProjectTests.a */,
+				9466C0D9A706C06A4C491C81 /* Pods_BaseProject.framework */,
+				1EBD5ACD7CF7A2E2275AB1C8 /* Pods_BaseProject_BaseProjectTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +151,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				58B19EF32D08BD1100B035F6 /* Configuration */,
+				97E3FE112D282CC300FCAE82 /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* BaseProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BaseProjectTests */,
@@ -189,18 +177,18 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6A00563D07DD07A49DA6ACF5 /* Pods-BaseProject.debug.xcconfig */,
-				BB2A276D346C82517447CB2D /* Pods-BaseProject.staging.xcconfig */,
-				1918A12BCD699B326C5FBA34 /* Pods-BaseProject.production.xcconfig */,
-				CBB68FADD48B739CC18D1355 /* Pods-BaseProject.productionrelease.xcconfig */,
-				CEE2C8D95D26C37F51FCA28F /* Pods-BaseProject.stores.xcconfig */,
-				3132E3AA0EFD7BC6A022F973 /* Pods-BaseProject.stagingrelease.xcconfig */,
-				4F52CD52A64B25D351111426 /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */,
-				5AB30CCF8E235ECDE3A1EA34 /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */,
-				A4A94312BC2B9AF80B03ABDE /* Pods-BaseProject-BaseProjectTests.production.xcconfig */,
-				BB72B4870BFF70DB3BB1E622 /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */,
-				D4CE512692183179DEF431D1 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */,
-				025487AE40950555236BD757 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */,
+				55B4E98DCC0DD81F12E667DA /* Pods-BaseProject.debug.xcconfig */,
+				7497D95CF83A198FB801C801 /* Pods-BaseProject.staging.xcconfig */,
+				F7575BC39F2525AEEDEC4F46 /* Pods-BaseProject.production.xcconfig */,
+				F421B91A662C6101A09EDBD8 /* Pods-BaseProject.productionrelease.xcconfig */,
+				6651B30381458ECDFE1A95E7 /* Pods-BaseProject.stores.xcconfig */,
+				AE016074C638C95FFD8450FA /* Pods-BaseProject.stagingrelease.xcconfig */,
+				2D88649A9A277A51B9B0CDED /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */,
+				697F026E29FA96459C32750D /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */,
+				FFCE7EF539899DB9C231A3BA /* Pods-BaseProject-BaseProjectTests.production.xcconfig */,
+				A79E5DF0AE32E4AE486FCE8D /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */,
+				5EC2F82DD654B6B1BE515C78 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */,
+				386462EFF430E80CD54B9667 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -212,12 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BaseProjectTests" */;
 			buildPhases = (
-				8A3733431811043CD7785FC2 /* [CP] Check Pods Manifest.lock */,
+				869B48BBA31EBBD68BC7CBBE /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C56977F2129A75E1ABAF0C56 /* [CP] Embed Pods Frameworks */,
-				3AE29DAB2A9C4C3CE06B8177 /* [CP] Copy Pods Resources */,
+				9916A7F63CD90327F52F7BA5 /* [CP] Embed Pods Frameworks */,
+				707B3969A4A0661271BC574A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,13 +221,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BaseProject" */;
 			buildPhases = (
-				94271244EEDDBB1CED553F3D /* [CP] Check Pods Manifest.lock */,
+				AEA4321B2732DB46382B519E /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				88491E40A0E8F9306FBB1F35 /* [CP] Embed Pods Frameworks */,
-				AC45BF271C447A4CE045C993 /* [CP] Copy Pods Resources */,
+				106D4C1E88702F69B1009476 /* [CP] Embed Pods Frameworks */,
+				C24782E4DA9BE4E1368B9009 /* [CP] Copy Pods Resources */,
+				A38025038B2801ED7A53F62D /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -300,6 +289,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				97E3FE122D282CC300FCAE82 /* GoogleService-Info.plist in Resources */,
 				34315F2C51D2066573C22E1F /* PrivacyInfo.xcprivacy in Resources */,
 				FA462D960BD24B96A9AF36BC /* Quicksand-Bold.ttf in Resources */,
 				7A7EF04AA44F4CB5A0C6604C /* Quicksand-Light.ttf in Resources */,
@@ -328,24 +318,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		3AE29DAB2A9C4C3CE06B8177 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88491E40A0E8F9306FBB1F35 /* [CP] Embed Pods Frameworks */ = {
+		106D4C1E88702F69B1009476 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,7 +335,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A3733431811043CD7785FC2 /* [CP] Check Pods Manifest.lock */ = {
+		707B3969A4A0661271BC574A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		869B48BBA31EBBD68BC7CBBE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,7 +374,37 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94271244EEDDBB1CED553F3D /* [CP] Check Pods Manifest.lock */ = {
+		9916A7F63CD90327F52F7BA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A38025038B2801ED7A53F62D /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\n\n##########################################################################\n##########################################################################\n#\n#  NOTE THAT IF YOU CHANGE THIS FILE YOU MUST RUN pod install AFTERWARDS\n#\n#  This file is installed as an Xcode build script in the project file\n#  by cocoapods, and you will not see your changes until you pod install\n#\n##########################################################################\n##########################################################################\n\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -Ku -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    if ! python3 --version >/dev/null 2>&1; then echo \"python3 not found, firebase.json file processing error.\" && exit 1; fi\n    _JSON_OUTPUT_BASE64=$(python3 -c 'import json,sys,base64;print(base64.b64encode(bytes(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"', '\"'rb'\"').read())['${_JSON_ROOT}']), '\"'utf-8'\"')).decode())' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_analytics_storage\n  _ANALYTICS_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_analytics_storage\")\n  if [[ $_ANALYTICS_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_ANALYTICS_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_storage\n  _ANALYTICS_AD_STORAGE=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_storage\")\n  if [[ $_ANALYTICS_AD_STORAGE ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_STORAGE\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_STORAGE\")\")\n  fi\n\n  # config.analytics_default_allow_ad_user_data\n  _ANALYTICS_AD_USER_DATA=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_user_data\")\n  if [[ $_ANALYTICS_AD_USER_DATA ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_USER_DATA\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AD_USER_DATA\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.analytics_registration_with_ad_network_enabled\n  _ANALYTICS_REGISTRATION_WITH_AD_NETWORK=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_registration_with_ad_network_enabled\")\n  if [[ $_ANALYTICS_REGISTRATION_WITH_AD_NETWORK ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_REGISTRATION_WITH_AD_NETWORK_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_REGISTRATION_WITH_AD_NETWORK\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
+		};
+		AEA4321B2732DB46382B519E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,7 +426,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC45BF271C447A4CE045C993 /* [CP] Copy Pods Resources */ = {
+		C24782E4DA9BE4E1368B9009 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,23 +441,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject/Pods-BaseProject-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C56977F2129A75E1ABAF0C56 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,7 +476,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F52CD52A64B25D351111426 /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */;
+			baseConfigurationReference = 2D88649A9A277A51B9B0CDED /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -500,7 +503,7 @@
 		};
 		00E356F71AD99517003FC87E /* StagingRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 025487AE40950555236BD757 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */;
+			baseConfigurationReference = 386462EFF430E80CD54B9667 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -524,9 +527,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A00563D07DD07A49DA6ACF5 /* Pods-BaseProject.debug.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Debug.xcconfig;
+			baseConfigurationReference = 55B4E98DCC0DD81F12E667DA /* Pods-BaseProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -554,9 +555,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* StagingRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3132E3AA0EFD7BC6A022F973 /* Pods-BaseProject.stagingrelease.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Release.xcconfig;
+			baseConfigurationReference = AE016074C638C95FFD8450FA /* Pods-BaseProject.stagingrelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -582,8 +581,6 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -631,6 +628,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -664,8 +672,6 @@
 		};
 		83CBBA211A601CBA00E9B192 /* StagingRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -706,6 +712,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -738,8 +755,6 @@
 		};
 		97CFA36A2D02299100421720 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -787,6 +802,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -820,9 +846,7 @@
 		};
 		97CFA36B2D02299100421720 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB2A276D346C82517447CB2D /* Pods-BaseProject.staging.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Debug.xcconfig;
+			baseConfigurationReference = 7497D95CF83A198FB801C801 /* Pods-BaseProject.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -850,7 +874,7 @@
 		};
 		97CFA36C2D02299100421720 /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AB30CCF8E235ECDE3A1EA34 /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */;
+			baseConfigurationReference = 697F026E29FA96459C32750D /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -877,8 +901,6 @@
 		};
 		97CFA36D2D022BAE00421720 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -926,6 +948,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -959,9 +992,7 @@
 		};
 		97CFA36E2D022BAE00421720 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1918A12BCD699B326C5FBA34 /* Pods-BaseProject.production.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Debug.xcconfig;
+			baseConfigurationReference = F7575BC39F2525AEEDEC4F46 /* Pods-BaseProject.production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -989,7 +1020,7 @@
 		};
 		97CFA36F2D022BAE00421720 /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4A94312BC2B9AF80B03ABDE /* Pods-BaseProject-BaseProjectTests.production.xcconfig */;
+			baseConfigurationReference = FFCE7EF539899DB9C231A3BA /* Pods-BaseProject-BaseProjectTests.production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1016,8 +1047,6 @@
 		};
 		97CFA3702D022DD400421720 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1065,6 +1094,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -1098,9 +1138,7 @@
 		};
 		97CFA3712D022DD400421720 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBB68FADD48B739CC18D1355 /* Pods-BaseProject.productionrelease.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Release.xcconfig;
+			baseConfigurationReference = F421B91A662C6101A09EDBD8 /* Pods-BaseProject.productionrelease.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1128,7 +1166,7 @@
 		};
 		97CFA3722D022DD400421720 /* ProductionRelease */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB72B4870BFF70DB3BB1E622 /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */;
+			baseConfigurationReference = A79E5DF0AE32E4AE486FCE8D /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1155,8 +1193,6 @@
 		};
 		97CFA3732D022DE800421720 /* Stores */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -1204,6 +1240,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon/ReactCommon.framework/Headers/react/nativemodule/core",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/ReactCommon-Samples/ReactCommon_Samples.framework/Headers/platform/ios",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-Fabric/React_Fabric.framework/Headers/react/renderer/components/view/platform/cxx",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-NativeModulesApple/React_NativeModulesApple.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/React-graphics/React_graphics.framework/Headers/react/renderer/graphics/platform/ios",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
@@ -1237,9 +1284,7 @@
 		};
 		97CFA3742D022DE800421720 /* Stores */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEE2C8D95D26C37F51FCA28F /* Pods-BaseProject.stores.xcconfig */;
-			baseConfigurationReferenceAnchor = 58B19EF32D08BD1100B035F6 /* Configuration */;
-			baseConfigurationReferenceRelativePath = Release.xcconfig;
+			baseConfigurationReference = 6651B30381458ECDFE1A95E7 /* Pods-BaseProject.stores.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1267,7 +1312,7 @@
 		};
 		97CFA3752D022DE800421720 /* Stores */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D4CE512692183179DEF431D1 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */;
+			baseConfigurationReference = 5EC2F82DD654B6B1BE515C78 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (

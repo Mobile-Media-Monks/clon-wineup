@@ -1,20 +1,15 @@
-export abstract class AbstractHttpClient {
-  protected baseURL: string = '';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { IHttpClient } from '@/core/@types/models/IHttpClient';
 
-  constructor(baseURL?: string) {
-    this.baseURL = baseURL || (process.env.BASE_URL as string);
-  }
-
+export abstract class AbstractHttpClient implements IHttpClient {
   abstract get<T>(
     path: string,
-    queryParams?: { [key: string]: unknown },
-    config?: unknown,
+    queryParams?: { [key: string]: any },
   ): Promise<T>;
-  abstract post<T>(path: string, body: unknown, config?: unknown): Promise<T>;
-  abstract put<T>(path: string, body: unknown, config?: unknown): Promise<T>;
-  abstract delete<T>(path: string, config?: unknown): Promise<T>;
+  abstract post<T>(path: string, body: unknown): Promise<T>;
+  abstract put<T>(path: string, body: unknown): Promise<T>;
+  abstract delete<T>(path: string): Promise<T>;
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   protected handleError(error: any): void {
     if (error.response) {
       console.log('HTTP error', error.response.data);
@@ -25,13 +20,5 @@ export abstract class AbstractHttpClient {
     }
 
     throw error;
-  }
-
-  protected getDefaultHeaders() {
-    const headers = {
-      'Content-Type': 'application/json',
-    };
-
-    return headers;
   }
 }
