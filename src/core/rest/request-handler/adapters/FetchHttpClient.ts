@@ -1,12 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { needsToken } from '@/utils/authUtils';
-import { refreshToken } from '@/core/rest/services/authentication';
-import {
-  EXCLUDED_RETRY_ENDPOINTS,
-  RETRY_STATUS_CODES,
-} from '@/core/rest/request-handler/constants';
-import { TokenStorage } from '@/core/rest/services/storage';
 import { AbstractHttpClient } from '@/core/rest/request-handler/AbstractHttpClient';
+import repositories from '@/core/repositories';
+import { TokenRepository } from '@/core/repositories/types';
+import { FetchInterceptors } from '../interceptors/FetchInterceptors';
 
 interface RequestConfig {
   method: string;
@@ -19,70 +15,22 @@ interface RequestConfig {
 export class FetchHttpClient extends AbstractHttpClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
+  private tokenRepository: TokenRepository;
+  private interceptors: FetchInterceptors;
 
   constructor(baseURL: string) {
     super();
+    this.tokenRepository = repositories.tokens;
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
     };
-  }
-
-  private async requestInterceptor(
-    config: RequestInit & { url?: string },
-  ): Promise<RequestInit> {
-    const token = TokenStorage.getAccessToken();
-    const csrfToken = TokenStorage.getCsrfToken();
-
-    console.log('requestInterceptor token', token);
-    console.log('requestInterceptor csrfToken', csrfToken);
-
-    if (config.url && needsToken(config.url, this.baseURL)) {
-      config.headers = {
-        ...config.headers,
-        ...(token && { Authorization: `Bearer ${token}` }),
-        ...(csrfToken && { 'X-CSRF-Token': csrfToken }),
-      };
-    }
-
-    return config;
-  }
-
-  private async responseInterceptor(
-    response: Response,
-    config: RequestConfig,
-  ): Promise<Response> {
-    if (!response.ok) {
-      const isRetryableStatus = RETRY_STATUS_CODES.includes(response.status);
-      const isExcludedEndpoint = EXCLUDED_RETRY_ENDPOINTS.some(endpoint =>
-        config.url.includes(endpoint),
-      );
-
-      if (isRetryableStatus && !config._retry && !isExcludedEndpoint) {
-        try {
-          const tokens = await refreshToken();
-          TokenStorage.setTokens(tokens);
-          this.setDefaultHeaders({
-            Authorization: `Bearer ${tokens.access_token}`,
-            'X-CSRF-Token': tokens.csrf_token,
-          });
-
-          // Retry the original request with new tokens
-          return this.executeRequest({
-            ...config,
-            _retry: true,
-          });
-        } catch (refreshError) {
-          console.error('Token refresh failed:', refreshError);
-          throw refreshError;
-        }
-      }
-
-      const errorData = await response.json().catch(() => ({}));
-      throw { status: response.status, data: errorData, config };
-    }
-
-    return response;
+    this.interceptors = new FetchInterceptors(
+      this.tokenRepository,
+      this.baseURL,
+      this.setDefaultHeaders.bind(this),
+      this.executeRequest.bind(this),
+    );
   }
 
   private async executeRequest(config: RequestConfig): Promise<Response> {
@@ -103,9 +51,10 @@ export class FetchHttpClient extends AbstractHttpClient {
       ...(config.body ? { body: JSON.stringify(config.body) } : {}),
     };
 
-    const interceptedConfig = await this.requestInterceptor(requestConfig);
+    const interceptedConfig =
+      await this.interceptors.requestInterceptor(requestConfig);
     const response = await fetch(url.toString(), interceptedConfig);
-    return this.responseInterceptor(response, config);
+    return this.interceptors.responseInterceptor(response, config);
   }
 
   private async request<T>(config: RequestConfig): Promise<T> {
@@ -138,16 +87,6 @@ export class FetchHttpClient extends AbstractHttpClient {
     };
   }
 
-  public setAuthTokens(tokens: {
-    access_token: string;
-    csrf_token: string;
-  }): void {
-    this.setDefaultHeaders({
-      Authorization: `Bearer ${tokens.access_token}`,
-      'X-CSRF-Token': tokens.csrf_token,
-    });
-  }
-
   async get<T>(path: string, queryParams?: Record<string, any>): Promise<T> {
     return this.request<T>({
       method: 'GET',
@@ -177,30 +116,5 @@ export class FetchHttpClient extends AbstractHttpClient {
       method: 'DELETE',
       url: path,
     });
-  }
-
-  // Error handling utility method
-  private handleRequestError(error: any): never {
-    if (error.response) {
-      throw {
-        status: error.response.status,
-        data: error.response.data,
-        config: error.config,
-      };
-    }
-
-    if (error.request) {
-      throw {
-        status: 0,
-        data: { message: 'Network Error' },
-        config: error.config,
-      };
-    }
-
-    throw {
-      status: 0,
-      data: { message: error.message || 'Unknown Error' },
-      config: error.config,
-    };
   }
 }
