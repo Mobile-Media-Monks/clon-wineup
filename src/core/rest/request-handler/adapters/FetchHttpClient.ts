@@ -34,6 +34,9 @@ export class FetchHttpClient extends AbstractHttpClient {
     const token = TokenStorage.getAccessToken();
     const csrfToken = TokenStorage.getCsrfToken();
 
+    console.log('requestInterceptor token', token);
+    console.log('requestInterceptor csrfToken', csrfToken);
+
     if (config.url && needsToken(config.url, this.baseURL)) {
       config.headers = {
         ...config.headers,

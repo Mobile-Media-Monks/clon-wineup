@@ -1,6 +1,8 @@
+import { TokenDataStoreState } from '../store/types';
+
 export interface TokenRepository {
-  getToken(): Promise<string | undefined>;
-  saveToken(token: string): void;
+  getToken(): Promise<TokenDataStoreState | undefined>;
+  saveToken(token: TokenDataStoreState): void;
 }
 
 export interface CounterRepository {

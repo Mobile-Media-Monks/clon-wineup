@@ -1,7 +1,8 @@
 import { FireBaseAuthService } from '@/core/auth/FireBaseAuthService';
 import endpoints from '@/core/rest/api';
-import { CMSTokens } from '@/core/@types/models/AuthInterface';
 import { Client } from '../request-handler';
+import { TokenDataStoreState } from '@/core/store/types';
+import repositories from '@/core/repositories';
 
 const api = new Client();
 const fbAuthService = new FireBaseAuthService();
@@ -9,7 +10,7 @@ const fbAuthService = new FireBaseAuthService();
 export const loginUser = async (
   email: string,
   password: string,
-): Promise<CMSTokens> => {
+): Promise<TokenDataStoreState> => {
   // Sign in with Firebase
   await fbAuthService.signIn(email, password);
 
@@ -31,10 +32,13 @@ export const loginUser = async (
   };
 
   // login request to the CMS
-  return await api.post<CMSTokens>(endpoints.CMS.LOGIN_FIREBASE, body);
+  return await api.post<TokenDataStoreState>(
+    endpoints.CMS.LOGIN_FIREBASE,
+    body,
+  );
 };
 
-export const refreshToken = async (): Promise<CMSTokens> => {
+export const refreshToken = async (): Promise<TokenDataStoreState> => {
   console.log('🚀 Refresh tokens ...');
   // Get firebase token
   const firebaseToken = await fbAuthService.getToken();
@@ -53,7 +57,10 @@ export const refreshToken = async (): Promise<CMSTokens> => {
     },
   };
 
-  return await api.post<CMSTokens>(endpoints.CMS.LOGIN_FIREBASE, body);
+  return await api.post<TokenDataStoreState>(
+    endpoints.CMS.LOGIN_FIREBASE,
+    body,
+  );
 };
 
 export const logoutUser = async (logoutToken: string): Promise<void> => {
@@ -62,4 +69,11 @@ export const logoutUser = async (logoutToken: string): Promise<void> => {
 
   // Sign out from Firebase
   await fbAuthService.signOut();
+
+  repositories.tokens.saveToken({
+    current_user: undefined,
+    access_token: undefined,
+    csrf_token: undefined,
+    logout_token: undefined,
+  });
 };

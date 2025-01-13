@@ -8,6 +8,9 @@ import {
 } from '@/core/rest/request-handler/constants';
 import { TokenStorage } from '@/core/rest/services/storage';
 import { AbstractHttpClient } from '@/core/rest/request-handler/AbstractHttpClient';
+import repositories from '@/core/repositories';
+// import { TokenDataStore, TokenDataStoreState } from '@/core/store/types';
+// import dataStore from '@/core/store';
 
 interface CustomAxiosRequestConfig extends AxiosRequestConfig {
   _retry?: boolean;
@@ -15,6 +18,8 @@ interface CustomAxiosRequestConfig extends AxiosRequestConfig {
 
 export class AxiosHttpClient extends AbstractHttpClient {
   private api: AxiosInstance;
+
+  //private tokenDataStore: TokenDataStore = dataStore.tokenDataStore;
 
   constructor(baseURL: string) {
     super();
@@ -26,17 +31,28 @@ export class AxiosHttpClient extends AbstractHttpClient {
     // Request interceptor
     this.api.interceptors.request.use(
       async config => {
-        const token = TokenStorage.getAccessToken();
-        const csrfToken = TokenStorage.getCsrfToken();
+        try {
+          //const tokens = await this.tokenDataStore.getToken();
+          //console.log('interceptors repositories tokens', tokens);
 
-        if (needsToken(config.url, config.baseURL)) {
-          if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-          }
+          console.log('ESTOY EN EL INTERCEPTOR REQUEST');
 
-          if (csrfToken) {
-            config.headers['X-CSRF-Token'] = csrfToken;
+          const token = TokenStorage.getAccessToken();
+          const csrfToken = TokenStorage.getCsrfToken();
+
+          if (needsToken(config.url, config.baseURL)) {
+            if (token) {
+              config.headers.Authorization = `Bearer ${token}`;
+              //this.api.defaults.headers.common.Authorization = `Bearer ${token}`;
+            }
+
+            if (csrfToken) {
+              config.headers['X-CSRF-Token'] = csrfToken;
+              //this.api.defaults.headers.common['X-CSRF-Token'] = csrfToken;
+            }
           }
+        } catch (error) {
+          console.log('ERROR INTERCEPTOR:', error);
         }
 
         return config;
@@ -65,6 +81,7 @@ export class AxiosHttpClient extends AbstractHttpClient {
           originalRequest._retry = true;
           try {
             const tokens = await refreshToken();
+            repositories.tokens.saveToken(tokens);
             TokenStorage.setTokens(tokens);
             this.api.defaults.headers.common.Authorization = `Bearer ${tokens.access_token}`;
             this.api.defaults.headers.common['X-CSRF-Token'] =

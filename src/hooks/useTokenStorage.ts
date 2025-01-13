@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { TokenStorage } from '@/core/rest/services/storage';
-import { CMSTokens } from '@/core/@types/models/AuthInterface';
+import { TokenDataStoreState } from '@/core/store/types';
 
 export const useTokenStorage = () => {
-  const [tokens, setTokens] = useState<CMSTokens | null>(
+  const [tokens, setTokens] = useState<TokenDataStoreState | null>(
     TokenStorage.getTokens(),
   );
 
@@ -19,7 +19,7 @@ export const useTokenStorage = () => {
     };
   }, []);
 
-  const setStoredTokens = (newTokens: CMSTokens) => {
+  const setStoredTokens = (newTokens: TokenDataStoreState) => {
     TokenStorage.setTokens(newTokens);
   };
 

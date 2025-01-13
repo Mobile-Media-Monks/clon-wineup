@@ -16,7 +16,7 @@ const LoginComponent = () => {
     <View>
       {tokens ? (
         <View>
-          <Text variant="title-primary-h5">{`User ${tokens.current_user.name} Logged in`}</Text>
+          <Text variant="title-primary-h5">{`User ${tokens?.current_user?.name} Logged in`}</Text>
           <Button title="Logout" onPress={logout} />
         </View>
       ) : (

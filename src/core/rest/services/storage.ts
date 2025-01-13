@@ -1,8 +1,8 @@
 //TODO: Remove this implementation when global state manager is available
 
-import { CMSTokens, CurrentUser } from '@/core/@types/models/AuthInterface';
 import { MMKV } from 'react-native-mmkv';
 import { tokenChangeEmitter } from './eventEmitter';
+import { CurrentUser, TokenDataStoreState } from '@/core/store/types';
 
 export const storage = new MMKV();
 
@@ -14,7 +14,7 @@ const STORAGE_KEYS = {
 } as const;
 
 export const TokenStorage = {
-  setTokens: (tokens: CMSTokens) => {
+  setTokens: (tokens: TokenDataStoreState) => {
     storage.set(STORAGE_KEYS.ACCESS_TOKEN, tokens.access_token);
     storage.set(STORAGE_KEYS.CSRF_TOKEN, tokens.csrf_token);
     storage.set(STORAGE_KEYS.LOGOUT_TOKEN, tokens.logout_token);
@@ -37,7 +37,7 @@ export const TokenStorage = {
     };
   },
 
-  getTokens: (): CMSTokens | null => {
+  getTokens: (): TokenDataStoreState | null => {
     const access_token = storage.getString(STORAGE_KEYS.ACCESS_TOKEN);
     const csrf_token = storage.getString(STORAGE_KEYS.CSRF_TOKEN);
     const logout_token = storage.getString(STORAGE_KEYS.LOGOUT_TOKEN);

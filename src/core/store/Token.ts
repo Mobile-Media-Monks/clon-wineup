@@ -8,15 +8,18 @@ export default class ZustandTokenDataStoreImpl
 {
   store = create(
     this.createPersistableState('token-persistor', () => ({
-      token: undefined,
+      current_user: undefined,
+      access_token: undefined,
+      csrf_token: undefined,
+      logout_token: undefined,
     })),
   );
 
-  public async getToken(): Promise<string | undefined> {
-    return this.useStore(state => state.token);
+  public async getToken(): Promise<TokenDataStoreState | undefined> {
+    return this.useStore(state => state);
   }
 
-  public async saveToken(token: string) {
-    this.store.setState({ token });
+  public async saveToken(token: TokenDataStoreState | object) {
+    this.store.setState(token);
   }
 }
