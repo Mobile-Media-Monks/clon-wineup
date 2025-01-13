@@ -14,7 +14,7 @@ export interface TokenDataStoreState {
 }
 
 export type TokenDataStore = ZustandDataStore<TokenDataStoreState> & {
-  getToken(): Promise<TokenDataStoreState | undefined>;
+  getToken(): TokenDataStoreState | undefined;
   saveToken(token: TokenDataStoreState): Promise<void>;
 };
 

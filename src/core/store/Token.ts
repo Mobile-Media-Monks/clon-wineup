@@ -15,8 +15,9 @@ export default class ZustandTokenDataStoreImpl
     })),
   );
 
-  public async getToken(): Promise<TokenDataStoreState | undefined> {
-    return this.useStore(state => state);
+  public getToken(): TokenDataStoreState | undefined {
+    //return this.useStore(state => state);
+    return this.store.getState();
   }
 
   public async saveToken(token: TokenDataStoreState | object) {

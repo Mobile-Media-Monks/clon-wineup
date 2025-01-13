@@ -4,7 +4,7 @@ import { TokenRepository } from './types';
 export class TokenRepositoryImpl implements TokenRepository {
   constructor(private readonly tokenDataStore: TokenDataStore) {}
 
-  async getToken(): Promise<TokenDataStoreState | undefined> {
+  getToken(): TokenDataStoreState | undefined {
     return this.tokenDataStore.getToken();
   }
 
