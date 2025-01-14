@@ -1,21 +1,17 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import { loginUser, logoutUser } from '@/core/rest/services/authentication';
 import { Alert } from 'react-native';
-import repositories from '@/core/repositories';
+import dataStore from '@/core/store';
 
 export const useAuth = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const tokens = repositories.tokens.getToken();
-
-  useEffect(() => {
-    console.log('useAuth tokens', tokens);
-  }, [tokens]);
+  const tokens = dataStore.tokenDataStore.useStore();
 
   const login = async (email: string, password: string) => {
     setLoading(true);
     try {
       const tokens = await loginUser(email, password);
-      repositories.tokens.saveToken(tokens);
+      dataStore.tokenDataStore.saveToken(tokens);
     } catch (error) {
       console.error('Login failed:', error);
       Alert.alert('Login failed');

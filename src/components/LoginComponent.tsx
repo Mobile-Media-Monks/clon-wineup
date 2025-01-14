@@ -14,7 +14,7 @@ const LoginComponent = () => {
 
   return (
     <View>
-      {tokens?.current_user?.name !== undefined ? (
+      {tokens?.current_user?.name ? (
         <View>
           <Text variant="title-primary-h5">{`User ${tokens?.current_user?.name} Logged in`}</Text>
           <Button title="Logout" onPress={logout} />
