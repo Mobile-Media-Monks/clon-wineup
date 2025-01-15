@@ -7,15 +7,16 @@ export interface CurrentUser {
 }
 
 export interface TokenDataStoreState {
-  current_user: CurrentUser | undefined;
-  access_token: string | undefined;
-  csrf_token: string | undefined;
-  logout_token: string | undefined;
+  current_user?: CurrentUser;
+  access_token?: string;
+  csrf_token?: string;
+  logout_token?: string;
 }
 
 export type TokenDataStore = ZustandDataStore<TokenDataStoreState> & {
   getToken(): TokenDataStoreState | undefined;
-  saveToken(token: TokenDataStoreState): Promise<void>;
+  saveToken(token?: TokenDataStoreState): Promise<void>;
+  clearToken(): Promise<void>;
 };
 
 export type CounterDataStore = ZustandDataStore<{

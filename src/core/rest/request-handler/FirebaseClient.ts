@@ -1,7 +1,18 @@
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
-import { FirebaseAuthInterface } from '../@types/models/AuthInterface';
 
-export class FireBaseAuthService implements FirebaseAuthInterface {
+interface Firebase {
+  signIn(
+    email: string,
+    password: string,
+  ): Promise<FirebaseAuthTypes.UserCredential>;
+  signOut(): Promise<void>;
+  getCurrentUser(): Promise<FirebaseAuthTypes.User | null>;
+  getToken(): Promise<string | null>;
+}
+
+export class FireBaseClient implements Firebase {
+  static instance = new FireBaseClient();
+
   async signIn(
     email: string,
     password: string,

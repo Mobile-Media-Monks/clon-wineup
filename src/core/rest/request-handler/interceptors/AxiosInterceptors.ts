@@ -1,11 +1,9 @@
 import { AxiosInstance, AxiosError, AxiosRequestConfig } from 'axios';
 import { needsToken } from '@/utils/authUtils';
-import { refreshToken } from '@/core/rest/services/authentication';
-import {
-  EXCLUDED_RETRY_ENDPOINTS,
-  RETRY_STATUS_CODES,
-} from '@/core/rest/request-handler/constants';
+
 import { TokenRepository } from '@/core/repositories/types';
+import { EXCLUDED_RETRY_ENDPOINTS, RETRY_STATUS_CODES } from '../constants';
+import repositories from '@/core/repositories';
 
 interface CustomAxiosRequestConfig extends AxiosRequestConfig {
   _retry?: boolean;
@@ -41,6 +39,7 @@ export const setupAxiosInterceptors = (
   api.interceptors.response.use(
     response => response,
     async (error: AxiosError) => {
+      console.log('AXIOS ERROR ->>>', error.response?.data);
       const originalRequest = error.config as CustomAxiosRequestConfig;
       const isRetryableStatus = error.response?.status
         ? RETRY_STATUS_CODES.includes(error.response?.status)
@@ -57,8 +56,7 @@ export const setupAxiosInterceptors = (
       ) {
         originalRequest._retry = true;
         try {
-          const tokens = await refreshToken();
-          tokenRepository.saveToken(tokens);
+          const tokens = await repositories.user.refreshToken();
           api.defaults.headers.common.Authorization = `Bearer ${tokens.access_token}`;
           api.defaults.headers.common['X-CSRF-Token'] = tokens.csrf_token;
           return api(originalRequest);

@@ -1,18 +1,19 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+import { TokenDataStore } from '@/core/store/types';
+import { AbstractHttpClient } from './AbstractHttpClient';
+import { AxiosHttpClient } from './adapters/AxiosHttpClient';
+import dataStore from '@/core/store';
 import Config from 'react-native-config';
-import { IHttpClient } from '@/core/@types/models/IHttpClient';
-import { AxiosHttpClient } from '@/core/rest/request-handler/adapters/AxiosHttpClient';
-//import { FetchHttpClient } from '@/core/rest/request-handler/adapters/FetchHttpClient';
 
 export class Client {
-  private httpClient: IHttpClient;
+  private httpClient: AbstractHttpClient;
+  private tokenDataStore: TokenDataStore = dataStore.tokenDataStore;
 
   constructor(baseURL: string = Config.BASE_URL) {
-    this.httpClient = new AxiosHttpClient(baseURL);
-    //this.httpClient = new FetchHttpClient(baseURL);
+    this.httpClient = new AxiosHttpClient(baseURL, this.tokenDataStore);
   }
 
-  async get<T>(path: string, queryParams?: { [key: string]: any }): Promise<T> {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async get<T>(path: string, queryParams?: Record<string, any>): Promise<T> {
     return this.httpClient.get<T>(path, queryParams);
   }
 
