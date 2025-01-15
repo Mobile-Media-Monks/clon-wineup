@@ -1,18 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios, { AxiosInstance } from 'axios';
-import { AbstractHttpClient } from '@/core/rest/request-handler/AbstractHttpClient';
-import repositories from '@/core/repositories';
+import { AbstractHttpClient } from '../AbstractHttpClient';
 import { TokenRepository } from '@/core/repositories/types';
 import { setupAxiosInterceptors } from '../interceptors/AxiosInterceptors';
 
 export class AxiosHttpClient extends AbstractHttpClient {
   private api: AxiosInstance;
 
-  private tokenRepository: TokenRepository;
-
-  constructor(baseURL: string) {
-    super();
-    this.tokenRepository = repositories.tokens;
+  constructor(
+    baseURL: string,
+    private tokenRepository: TokenRepository,
+  ) {
+    super(baseURL);
     this.api = axios.create({
       baseURL,
       headers: this.getDefaultHeaders(),
@@ -20,12 +18,7 @@ export class AxiosHttpClient extends AbstractHttpClient {
     setupAxiosInterceptors(this.api, this.tokenRepository);
   }
 
-  private getDefaultHeaders() {
-    return {
-      'Content-Type': 'application/json',
-    };
-  }
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async get<T>(path: string, queryParams?: { [key: string]: any }): Promise<T> {
     const response = await this.api.get<T>(path, { params: queryParams });
     return response.data;

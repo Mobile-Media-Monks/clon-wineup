@@ -4,7 +4,7 @@ import { View, Button } from 'react-native';
 import { Text } from '@/components';
 
 const LoginComponent = () => {
-  const { login, logout, loading, tokens } = useAuth();
+  const { login, logout, loading, user } = useAuth();
   const email = 'walter.lambardi+12@mediamonks.com';
   const password = 'waltmonk';
 
@@ -14,9 +14,9 @@ const LoginComponent = () => {
 
   return (
     <View>
-      {tokens?.current_user?.name ? (
+      {user?.current_user?.name ? (
         <View>
-          <Text variant="title-primary-h5">{`User ${tokens?.current_user?.name} Logged in`}</Text>
+          <Text variant="title-primary-h5">{`User ${user?.current_user?.name} Logged in`}</Text>
           <Button title="Logout" onPress={logout} />
         </View>
       ) : (
