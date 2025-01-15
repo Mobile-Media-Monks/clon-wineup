@@ -70,9 +70,9 @@ export class UserRepositoryImpl implements UserRepository {
       return false;
     }
     try {
+      await this.firebaseClient.signOut();
       this.tokenDataStore.clearToken();
       await this.client.logout(token);
-      await this.firebaseClient.signOut();
       return true;
     } catch (err) {
       console.log('Error logout', err);

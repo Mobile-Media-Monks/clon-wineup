@@ -2,7 +2,6 @@
 
 import endpoints from '@/core/rest/api';
 import { Client } from '../../request-handler';
-import { TokenDataStoreState } from '@/core/store/types';
 import { AuthUserResponse } from '@/core/@types/models/User';
 
 export interface AuthClient {
@@ -10,12 +9,12 @@ export interface AuthClient {
     email: string;
     password: string;
     token: string;
-  }): Promise<TokenDataStoreState>;
+  }): Promise<AuthUserResponse>;
 
   refreshToken(payload: {
     email: string;
     token: string;
-  }): Promise<TokenDataStoreState>;
+  }): Promise<AuthUserResponse>;
 
   logout(token: string): Promise<boolean>;
 }
