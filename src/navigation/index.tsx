@@ -14,6 +14,11 @@ const InitStackNavigator = () => {
   return (
     <InitNavigation.Navigator>
       <InitNavigation.Screen
+        name={Screens.Login}
+        component={Routes[Screens.Login]}
+        options={{ headerShown: false }}
+      />
+      <InitNavigation.Screen
         name={Screens.Home}
         component={Routes[Screens.Home]}
       />
