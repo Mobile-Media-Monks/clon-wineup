@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BaseProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BaseProjectTests.m */; };
+		02C81B626B264D3B9DEF8125 /* Onest-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A18D80B3E464A1EAC58C786 /* Onest-Regular.ttf */; };
+		0D2DC130F0724854B5D9518D /* Onest-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D638091EF5A4B5A9358DB3B /* Onest-Thin.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -15,9 +17,17 @@
 		1796EFF13CF94816ABEDD2BF /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61BE73D2CBBA454F938C44AD /* Quicksand-Regular.ttf */; };
 		34315F2C51D2066573C22E1F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		3A231067F082454CBD183664 /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7AA36AF043E4293ABA5C5D2 /* Quicksand-Medium.ttf */; };
+		6F9C009F0F3747899A12B3FC /* Onest-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96F3180DD5D14F998EE18362 /* Onest-Black.ttf */; };
+		72245BFD53C544CE9F261543 /* Onest-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A52D5B18D8434F93ACC9E2A5 /* Onest-SemiBold.ttf */; };
 		7A7EF04AA44F4CB5A0C6604C /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDDFB4C195A049B999C52CC5 /* Quicksand-Light.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8A6CA0A1EA444CB9A47950C0 /* Onest-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F92D5FE9B0444561B07C60B5 /* Onest-VariableFont_wght.ttf */; };
+		96BF82EB5A9F4B63B9F19D9E /* Onest-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4B696830C42C5A6F850BC /* Onest-ExtraBold.ttf */; };
+		A3522758D50143C2A570E77F /* Onest-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97C0CF30474247D08BC06F94 /* Onest-Light.ttf */; };
 		C786F85E9116EB50E84BB989 /* libPods-BaseProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1BE41AE07F01F97CD449CC /* libPods-BaseProject.a */; };
+		D3ED6C0D2E75429EBF96FB47 /* Onest-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D60887FB89A488BA2058F64 /* Onest-Medium.ttf */; };
+		D86421675C43470BB2F6485C /* Onest-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 563DB35418224D189E69BCFA /* Onest-ExtraLight.ttf */; };
+		E9AC1A3056F64770A5AD5B4E /* Onest-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B240A78264A74DC88437FA5E /* Onest-Bold.ttf */; };
 		F4DA7339E7673FAE4C7A059A /* libPods-BaseProject-BaseProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B21C64D71C43DD22A69589 /* libPods-BaseProject-BaseProjectTests.a */; };
 		FA462D960BD24B96A9AF36BC /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D550133DD10449049F5CD3C8 /* Quicksand-Bold.ttf */; };
 /* End PBXBuildFile section */
@@ -37,6 +47,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BaseProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseProjectTests.m; sourceTree = "<group>"; };
 		025487AE40950555236BD757 /* Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stagingrelease.xcconfig"; sourceTree = "<group>"; };
+		0D638091EF5A4B5A9358DB3B /* Onest-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Thin.ttf"; path = "../src/assets/fonts/Onest-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BaseProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BaseProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = BaseProject/AppDelegate.mm; sourceTree = "<group>"; };
@@ -47,14 +58,22 @@
 		1918A12BCD699B326C5FBA34 /* Pods-BaseProject.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.production.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.production.xcconfig"; sourceTree = "<group>"; };
 		3132E3AA0EFD7BC6A022F973 /* Pods-BaseProject.stagingrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.stagingrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.stagingrelease.xcconfig"; sourceTree = "<group>"; };
 		4F52CD52A64B25D351111426 /* Pods-BaseProject-BaseProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		563DB35418224D189E69BCFA /* Onest-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-ExtraLight.ttf"; path = "../src/assets/fonts/Onest-ExtraLight.ttf"; sourceTree = "<group>"; };
 		5AB30CCF8E235ECDE3A1EA34 /* Pods-BaseProject-BaseProjectTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.staging.xcconfig"; sourceTree = "<group>"; };
 		5FF9BB6F6BCC4BCF9152A3AA /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-SemiBold.ttf"; path = "../src/assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		61BE73D2CBBA454F938C44AD /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Regular.ttf"; path = "../src/assets/fonts/Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		6A00563D07DD07A49DA6ACF5 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6AD4B696830C42C5A6F850BC /* Onest-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-ExtraBold.ttf"; path = "../src/assets/fonts/Onest-ExtraBold.ttf"; sourceTree = "<group>"; };
+		7D60887FB89A488BA2058F64 /* Onest-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Medium.ttf"; path = "../src/assets/fonts/Onest-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BaseProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A18D80B3E464A1EAC58C786 /* Onest-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Regular.ttf"; path = "../src/assets/fonts/Onest-Regular.ttf"; sourceTree = "<group>"; };
+		96F3180DD5D14F998EE18362 /* Onest-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Black.ttf"; path = "../src/assets/fonts/Onest-Black.ttf"; sourceTree = "<group>"; };
+		97C0CF30474247D08BC06F94 /* Onest-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Light.ttf"; path = "../src/assets/fonts/Onest-Light.ttf"; sourceTree = "<group>"; };
 		A4A94312BC2B9AF80B03ABDE /* Pods-BaseProject-BaseProjectTests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.production.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.production.xcconfig"; sourceTree = "<group>"; };
+		A52D5B18D8434F93ACC9E2A5 /* Onest-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-SemiBold.ttf"; path = "../src/assets/fonts/Onest-SemiBold.ttf"; sourceTree = "<group>"; };
 		A7AA36AF043E4293ABA5C5D2 /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Medium.ttf"; path = "../src/assets/fonts/Quicksand-Medium.ttf"; sourceTree = "<group>"; };
 		A7B21C64D71C43DD22A69589 /* libPods-BaseProject-BaseProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject-BaseProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B240A78264A74DC88437FA5E /* Onest-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-Bold.ttf"; path = "../src/assets/fonts/Onest-Bold.ttf"; sourceTree = "<group>"; };
 		BB2A276D346C82517447CB2D /* Pods-BaseProject.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.staging.xcconfig"; path = "Target Support Files/Pods-BaseProject/Pods-BaseProject.staging.xcconfig"; sourceTree = "<group>"; };
 		BB72B4870BFF70DB3BB1E622 /* Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.productionrelease.xcconfig"; sourceTree = "<group>"; };
 		CA1BE41AE07F01F97CD449CC /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +83,7 @@
 		D4CE512692183179DEF431D1 /* Pods-BaseProject-BaseProjectTests.stores.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject-BaseProjectTests.stores.xcconfig"; path = "Target Support Files/Pods-BaseProject-BaseProjectTests/Pods-BaseProject-BaseProjectTests.stores.xcconfig"; sourceTree = "<group>"; };
 		D550133DD10449049F5CD3C8 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-Bold.ttf"; path = "../src/assets/fonts/Quicksand-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F92D5FE9B0444561B07C60B5 /* Onest-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Onest-VariableFont_wght.ttf"; path = "../src/assets/fonts/Onest-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -149,6 +169,16 @@
 				A7AA36AF043E4293ABA5C5D2 /* Quicksand-Medium.ttf */,
 				61BE73D2CBBA454F938C44AD /* Quicksand-Regular.ttf */,
 				5FF9BB6F6BCC4BCF9152A3AA /* Quicksand-SemiBold.ttf */,
+				96F3180DD5D14F998EE18362 /* Onest-Black.ttf */,
+				B240A78264A74DC88437FA5E /* Onest-Bold.ttf */,
+				6AD4B696830C42C5A6F850BC /* Onest-ExtraBold.ttf */,
+				563DB35418224D189E69BCFA /* Onest-ExtraLight.ttf */,
+				97C0CF30474247D08BC06F94 /* Onest-Light.ttf */,
+				7D60887FB89A488BA2058F64 /* Onest-Medium.ttf */,
+				8A18D80B3E464A1EAC58C786 /* Onest-Regular.ttf */,
+				A52D5B18D8434F93ACC9E2A5 /* Onest-SemiBold.ttf */,
+				0D638091EF5A4B5A9358DB3B /* Onest-Thin.ttf */,
+				F92D5FE9B0444561B07C60B5 /* Onest-VariableFont_wght.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -306,6 +336,16 @@
 				3A231067F082454CBD183664 /* Quicksand-Medium.ttf in Resources */,
 				1796EFF13CF94816ABEDD2BF /* Quicksand-Regular.ttf in Resources */,
 				1414436039CF4125936139F2 /* Quicksand-SemiBold.ttf in Resources */,
+				6F9C009F0F3747899A12B3FC /* Onest-Black.ttf in Resources */,
+				E9AC1A3056F64770A5AD5B4E /* Onest-Bold.ttf in Resources */,
+				96BF82EB5A9F4B63B9F19D9E /* Onest-ExtraBold.ttf in Resources */,
+				D86421675C43470BB2F6485C /* Onest-ExtraLight.ttf in Resources */,
+				A3522758D50143C2A570E77F /* Onest-Light.ttf in Resources */,
+				D3ED6C0D2E75429EBF96FB47 /* Onest-Medium.ttf in Resources */,
+				02C81B626B264D3B9DEF8125 /* Onest-Regular.ttf in Resources */,
+				72245BFD53C544CE9F261543 /* Onest-SemiBold.ttf in Resources */,
+				0D2DC130F0724854B5D9518D /* Onest-Thin.ttf in Resources */,
+				8A6CA0A1EA444CB9A47950C0 /* Onest-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
