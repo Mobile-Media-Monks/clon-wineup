@@ -13,11 +13,18 @@ import Screens from '../../navigation/screens';
 type Props = NativeStackScreenProps<AllNavigation, Screens.Home>;
 
 const Home: React.FC<Props> = () => {
-  const { countries } = useHome();
+  const { countries, saveToken, getToken, counter, setCounter } = useHome();
+
   return (
     <View style={styles.content}>
-      <Pressable>
-        <Text variant="title-primary-h3">{t(localization.home.title)}</Text>
+      <Pressable onPress={setCounter}>
+        <Text variant="title-primary-h3">Counter {counter}</Text>
+      </Pressable>
+      <Pressable onPress={saveToken}>
+        <Text variant="title-primary-h3">Save Token</Text>
+      </Pressable>
+      <Pressable onPress={getToken}>
+        <Text variant="title-primary-h3">Get token</Text>
       </Pressable>
       <Text variant="regular-primary-p">ENV: {Config.ENV}</Text>
       <Text variant="title-primary-h5">
