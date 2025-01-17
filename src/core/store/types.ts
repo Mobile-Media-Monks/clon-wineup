@@ -1,12 +1,22 @@
 import ZustandDataStore from './commons';
 
-export type TokenDataStoreState = {
-  token?: string;
-};
+export interface CurrentUser {
+  uid: string;
+  roles: string[];
+  name: string;
+}
+
+export interface TokenDataStoreState {
+  current_user?: CurrentUser;
+  access_token?: string;
+  csrf_token?: string;
+  logout_token?: string;
+}
 
 export type TokenDataStore = ZustandDataStore<TokenDataStoreState> & {
-  getToken(): Promise<string | undefined>;
-  saveToken(token: string): Promise<void>;
+  getToken(): TokenDataStoreState | undefined;
+  saveToken(token?: TokenDataStoreState): Promise<void>;
+  clearToken(): Promise<void>;
 };
 
 export type CounterDataStore = ZustandDataStore<{

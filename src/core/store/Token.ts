@@ -6,17 +6,26 @@ export default class ZustandTokenDataStoreImpl
   extends ZustandDataStore<TokenDataStoreState>
   implements TokenDataStore
 {
+  initialState: TokenDataStoreState = {
+    current_user: undefined,
+    access_token: undefined,
+    csrf_token: undefined,
+    logout_token: undefined,
+  };
+
   store = create(
-    this.createPersistableState('token-persistor', () => ({
-      token: undefined,
-    })),
+    this.createPersistableState('token-persistor', () => this.initialState),
   );
 
-  public async getToken(): Promise<string | undefined> {
-    return this.useStore(state => state.token);
+  public getToken(): TokenDataStoreState {
+    return this.store.getState();
   }
 
-  public async saveToken(token: string) {
-    this.store.setState({ token });
+  public async saveToken(token?: TokenDataStoreState) {
+    this.store.setState(token ?? {});
+  }
+
+  public async clearToken() {
+    this.store.setState(this.initialState);
   }
 }

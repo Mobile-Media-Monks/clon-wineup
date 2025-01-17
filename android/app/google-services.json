@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "191862508653",
+    "project_id": "wineup-sandbox",
+    "storage_bucket": "wineup-sandbox.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191862508653:android:e1d8440ab08dea90204364",
+        "android_client_info": {
+          "package_name": "com.baseproject.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191862508653-hvbgqbr8tgdcind1q1t89u0lo6lhcg8c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.baseproject.dev",
+            "certificate_hash": "1ec9e583efd71b22b4c4d5397567ddb01cb625c6"
+          }
+        },
+        {
+          "client_id": "191862508653-rj5sa7tm5hcl6utf787hl71jhl9rocba.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.baseproject.dev",
+            "certificate_hash": "e6611621acdff0f3de559e6f2de885a3e0bde983"
+          }
+        },
+        {
+          "client_id": "191862508653-2cn9ugj9fbu4eql64hcg1r7u5kjpmte3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANyHannoehzDIQytuN80Hzkg_ukHSShAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191862508653-2cn9ugj9fbu4eql64hcg1r7u5kjpmte3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "191862508653-1d80lgujv29ivpiqb0m772jab46q7ipv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.baseproject.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191862508653:android:6427fc30faaec1af204364",
+        "android_client_info": {
+          "package_name": "com.wineup.app.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191862508653-5mpp4jr5l2ojut9lpg4aq6trsunvr072.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wineup.app.uat",
+            "certificate_hash": "e6611621acdff0f3de559e6f2de885a3e0bde983"
+          }
+        },
+        {
+          "client_id": "191862508653-hblclebfg60uugr4fii0tr64123elhb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wineup.app.uat",
+            "certificate_hash": "1ec9e583efd71b22b4c4d5397567ddb01cb625c6"
+          }
+        },
+        {
+          "client_id": "191862508653-2cn9ugj9fbu4eql64hcg1r7u5kjpmte3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANyHannoehzDIQytuN80Hzkg_ukHSShAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191862508653-2cn9ugj9fbu4eql64hcg1r7u5kjpmte3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "191862508653-1d80lgujv29ivpiqb0m772jab46q7ipv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.baseproject.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
