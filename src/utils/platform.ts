@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import { height, width } from '@/theme/metrics';
+import { height, width } from '@/utils/dimensions';
 
 export const isiOS = Platform.OS === 'ios';
 export const isAndroid = Platform.OS === 'android';

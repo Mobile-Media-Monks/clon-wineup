@@ -12,7 +12,7 @@ Reactotron.configure({ name: 'ClonApp' })
     reactotronZustand({
       stores: [
         { name: 'counter', store: dataStore.counterDataStore.useStore },
-        { name: 'token', store: dataStore.tokenDataStore.useStore },
+        { name: 'tokens', store: dataStore.tokenDataStore.useStore },
       ],
     }),
   )

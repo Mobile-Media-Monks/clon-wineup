@@ -1,7 +1,6 @@
-import { Dimensions, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
 import { isAndroid, isiOS, isiPhoneX } from '@/utils/platform';
-
-export const { height, width } = Dimensions.get('window');
+import { height, width } from '@/utils/dimensions';
 
 const HORIZONTAL_PAGE_PADDING_PERCENTAGE = 8;
 const HORIZONTAL_SIZE_PERCENTAGE = 16;

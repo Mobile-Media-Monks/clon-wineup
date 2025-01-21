@@ -1,60 +1,31 @@
+import { TokenDataStore } from '@/core/store/types';
 import { AbstractHttpClient } from './AbstractHttpClient';
+import { AxiosHttpClient } from './adapters/AxiosHttpClient';
+import dataStore from '@/core/store';
+import Config from 'react-native-config';
 
-export class Client extends AbstractHttpClient {
-  constructor(baseURL: string = '') {
-    super(baseURL);
+export class Client {
+  private httpClient: AbstractHttpClient;
+  private tokenDataStore: TokenDataStore = dataStore.tokenDataStore;
+
+  constructor(baseURL: string = Config.BASE_URL) {
+    this.httpClient = new AxiosHttpClient(baseURL, this.tokenDataStore);
   }
 
-  async get<T>(
-    path: string,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    queryParams?: { [key: string]: any },
-  ): Promise<T> {
-    const headers = await this.getDefaultHeaders();
-
-    const queryPath = Object.keys(queryParams ?? {}).reduce((params, key) => {
-      return (
-        params +
-        `${params.endsWith('?') ? '' : '&'}${encodeURIComponent(key)}=${encodeURIComponent(
-          queryParams?.[key],
-        )}`
-      );
-    }, `${path}?`);
-
-    try {
-      const response = await fetch(this.baseURL + queryPath, {
-        method: 'GET',
-        headers,
-      });
-      if (!response.ok) throw { response };
-      return (await response.json()) as T;
-    } catch (error) {
-      this.handleError(error);
-      throw error;
-    }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  async get<T>(path: string, queryParams?: Record<string, any>): Promise<T> {
+    return this.httpClient.get<T>(path, queryParams);
   }
 
   async post<T>(path: string, body: unknown): Promise<T> {
-    const headers = await this.getDefaultHeaders();
-
-    try {
-      const response = await fetch(this.baseURL + path, {
-        method: 'POST',
-        body: JSON.stringify(body),
-        headers,
-      });
-      if (!response.ok) throw { response };
-      return (await response.json()) as T;
-    } catch (error) {
-      this.handleError(error);
-      throw error;
-    }
+    return this.httpClient.post<T>(path, body);
   }
 
-  put<T>(): Promise<T> {
-    throw new Error('Method not implemented.');
+  async put<T>(path: string, body: unknown): Promise<T> {
+    return this.httpClient.put<T>(path, body);
   }
-  delete<T>(): Promise<T> {
-    throw new Error('Method not implemented.');
+
+  async delete<T>(path: string): Promise<T> {
+    return this.httpClient.delete<T>(path);
   }
 }
