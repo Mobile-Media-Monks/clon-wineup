@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { Eye, EyeSlash } from '@/theme/svgs';
 import { DISABLED } from '@/components/FormInput/constants';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useThemeContext } from '@/theme/ThemeProvider';
 

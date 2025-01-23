@@ -3,10 +3,10 @@ import { ScrollView, KeyboardAvoidingView, View } from 'react-native';
 import { FormProvider } from 'react-hook-form';
 import { FormInputTypes } from '@/components/FormInput/enum';
 import { IconPosition } from '@/components/Buttons/enum';
-import loginStyle from './login.style';
+import loginStyle from './styles';
 import { isiOS } from '@/utils/platform';
 import { CustomButton, FormInput } from '@/components';
-import { ChevronRight, EyeSlash } from '@/theme/svgs';
+import { ChevronRight } from '@/theme/svgs';
 import { t } from 'i18next';
 import { useStyles } from '@/theme/hooks/useStyles';
 import { useLoginForm } from './hooks/useLoginForm';
@@ -20,7 +20,6 @@ const LoginForm: React.FC<LoginFormProps> = ({
 }) => {
   const styles = useStyles(loginStyle);
   const {
-    colors,
     control,
     errors,
     inputRefs,
@@ -43,7 +42,6 @@ const LoginForm: React.FC<LoginFormProps> = ({
           showsVerticalScrollIndicator={false}
           nestedScrollEnabled={true}>
           <View style={styles.inputsContainer}>
-            <EyeSlash fill={colors.theme.wine.four} />
             <FormInput
               control={control}
               theme={theme}

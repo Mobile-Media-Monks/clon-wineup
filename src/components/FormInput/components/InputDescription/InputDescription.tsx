@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
-import { typography } from '@/theme';
 import { DISABLED } from '@/components/FormInput/constants';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useThemeContext } from '@/theme/ThemeProvider';
+import { Text } from '@/components';
+import { buildStyles } from '@/theme';
+import { useStyles } from '@/theme/hooks/useStyles';
 
 interface InputDescriptionProps {
   description?: string;
@@ -23,6 +24,7 @@ const InputDescription: React.FC<InputDescriptionProps> = ({
 }) => {
   const { theme: themeContext } = useThemeContext();
   const colors = themeContext?.colors;
+  const styles = useStyles(componentStyles);
 
   if (hasError || isCustomValidating || !description) {
     return null;
@@ -30,6 +32,7 @@ const InputDescription: React.FC<InputDescriptionProps> = ({
 
   return (
     <Text
+      variant="medium-transparent-span"
       style={[
         styles.description,
         {
@@ -43,11 +46,10 @@ const InputDescription: React.FC<InputDescriptionProps> = ({
   );
 };
 
-const styles = StyleSheet.create({
+const componentStyles = buildStyles((_, helpers) => ({
   description: {
-    ...typography.caption,
-    letterSpacing: -0.1,
+    letterSpacing: -0.1 * helpers.metrics.scaleCoefficient,
   },
-});
+}));
 
 export default InputDescription;

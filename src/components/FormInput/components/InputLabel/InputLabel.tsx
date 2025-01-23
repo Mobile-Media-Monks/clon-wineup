@@ -1,9 +1,10 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
-import { metrics, typography } from '@/theme';
-import { Theme } from '@/core/@types/theme';
+import { buildStyles } from '@/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useThemeContext } from '@/theme/ThemeProvider';
+import { Text } from '@/components';
+import { useStyles } from '@/theme/hooks/useStyles';
 
 interface InputLabelProps {
   label?: string;
@@ -14,6 +15,7 @@ interface InputLabelProps {
 const InputLabel: React.FC<InputLabelProps> = ({ label, theme, disabled }) => {
   const { theme: themeContext } = useThemeContext();
   const colors = themeContext?.colors;
+  const styles = useStyles(componentStyles);
 
   if (!label) {
     return null;
@@ -21,6 +23,7 @@ const InputLabel: React.FC<InputLabelProps> = ({ label, theme, disabled }) => {
 
   return (
     <Text
+      variant="medium-transparent-p"
       style={[
         styles.label,
         {
@@ -34,11 +37,10 @@ const InputLabel: React.FC<InputLabelProps> = ({ label, theme, disabled }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const componentStyles = buildStyles((_, helpers) => ({
   label: {
-    ...typography.bodySMedium,
-    marginBottom: 8 * metrics.scaleCoefficient,
+    marginBottom: 8 * helpers.metrics.scaleCoefficient,
   },
-});
+}));
 
 export default InputLabel;

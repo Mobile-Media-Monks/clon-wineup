@@ -7,10 +7,10 @@ import Header from './components/Header/Header';
 import { GradientBackground } from '@/components';
 import LoginForm from './LoginForm';
 import { useLogin } from './hooks/useLogin';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { images } from '@/theme';
 import { t } from 'i18next';
-import loginStyle from './login.style';
+import loginStyle from './styles';
 import { useStyles } from '@/theme/hooks/useStyles';
 
 type LoginProps = ScreenProps<Screens.Login>;
@@ -38,7 +38,6 @@ const Login = ({ navigation }: LoginProps) => {
           handleLogin={handleLoginWithEmailAndPassword}
           setFormError={firebaseEmailLoginError}
         />
-
         <Divider />
       </View>
     </View>

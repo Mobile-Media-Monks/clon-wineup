@@ -1,6 +1,5 @@
 import { ButtonTypes, IconButtonType } from './enum';
-import { Theme } from '@/core/@types/theme';
-import { AppTheme } from '@/theme/ThemeProvider/types';
+import { AppTheme, Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 
 export const getGradientsColors = (

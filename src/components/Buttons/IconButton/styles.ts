@@ -1,38 +1,36 @@
-import { metrics } from '@/theme';
-import { StyleSheet } from 'react-native';
 import { ButtonState, IconButtonType } from '../enum';
 import { CONTAINER_OPACITY } from '../constants';
-import { Theme } from '@/core/@types/theme';
 import { addAlpha } from '@/utils/commons';
-import { AppTheme } from '@/theme/ThemeProvider/types';
+import { AppTheme, Theme } from '@/theme/ThemeProvider/types';
+import { buildStyles } from '@/theme';
 
-export default StyleSheet.create({
+export default buildStyles((_, helpers) => ({
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10 * metrics.scaleCoefficient,
+    padding: 10 * helpers.metrics.scaleCoefficient,
     alignSelf: 'center',
     zIndex: 1,
   },
-});
+}));
 
-export const sizeStyles = StyleSheet.create({
+export const customSizeStyles = buildStyles((_, helpers) => ({
   large: {
-    borderRadius: 16 * metrics.scaleCoefficient,
-    height: 56 * metrics.scaleCoefficient,
-    width: 56 * metrics.scaleCoefficient,
+    borderRadius: 16 * helpers.metrics.scaleCoefficient,
+    height: 56 * helpers.metrics.scaleCoefficient,
+    width: 56 * helpers.metrics.scaleCoefficient,
   },
   small: {
-    borderRadius: 12 * metrics.scaleCoefficient,
-    height: 40 * metrics.scaleCoefficient,
-    width: 40 * metrics.scaleCoefficient,
+    borderRadius: 12 * helpers.metrics.scaleCoefficient,
+    height: 40 * helpers.metrics.scaleCoefficient,
+    width: 40 * helpers.metrics.scaleCoefficient,
   },
   medium: {
-    borderRadius: 12 * metrics.scaleCoefficient,
-    height: 48 * metrics.scaleCoefficient,
-    width: 48 * metrics.scaleCoefficient,
+    borderRadius: 12 * helpers.metrics.scaleCoefficient,
+    height: 48 * helpers.metrics.scaleCoefficient,
+    width: 48 * helpers.metrics.scaleCoefficient,
   },
-});
+}));
 
 export const getContainerStyle = (
   colors: AppTheme['colors'],

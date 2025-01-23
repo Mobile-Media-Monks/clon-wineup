@@ -1,7 +1,6 @@
+import { StyleBuilder } from './ThemeProvider/types';
 import images from './images';
 import metrics from './metrics';
-import { StyleBuilder } from './ThemeProvider/types';
-import typography from './typography';
 
 /**
  * This is public convenience about style creation, is not needed, but it's
@@ -38,4 +37,4 @@ export function buildStyles<R>(operation: StyleBuilder<R>) {
   return operation;
 }
 
-export { images, metrics, typography };
+export { images, metrics };

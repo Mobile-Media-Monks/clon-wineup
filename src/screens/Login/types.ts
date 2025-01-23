@@ -1,4 +1,4 @@
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 
 export interface LoginData {
   email: string;

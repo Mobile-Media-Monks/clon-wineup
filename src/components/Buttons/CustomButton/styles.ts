@@ -1,21 +1,20 @@
-import { buildStyles, metrics, typography } from '@/theme';
+import { buildStyles } from '@/theme';
 import { StyleSheet } from 'react-native';
 import { ButtonTypes, IconPosition } from '../enum';
 import { SvgProps } from 'react-native-svg';
 import { ButtonState } from '../enum';
 import { BORDER_OPACITY, CONTAINER_OPACITY } from '../constants';
-import { Theme } from '@/core/@types/theme';
 import { addAlpha } from '@/utils/commons';
-import { AppTheme } from '@/theme/ThemeProvider/types';
+import { AppTheme, Theme } from '@/theme/ThemeProvider/types';
 
-export const customButtonStyle = buildStyles(theme => ({
+export const customButtonStyle = buildStyles((theme, helpers) => ({
   animatedContainer: {
     backgroundColor: 'transparent',
   },
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10 * metrics.scaleCoefficient,
+    padding: 10 * helpers.metrics.scaleCoefficient,
     alignSelf: 'center',
   },
   centerLabel: {
@@ -29,7 +28,7 @@ export const customButtonStyle = buildStyles(theme => ({
     alignContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    gap: 10 * metrics.scaleCoefficient,
+    gap: 10 * helpers.metrics.scaleCoefficient,
   },
   contentContainer: {
     flexDirection: 'row',
@@ -44,58 +43,51 @@ export const customButtonStyle = buildStyles(theme => ({
     justifyContent: 'center',
   },
   title: {
-    ...typography.cta,
-    letterSpacing: -0.2 * metrics.scaleCoefficient,
+    letterSpacing: -0.2 * helpers.metrics.scaleCoefficient,
     color: theme.colors.secondary.white,
   },
   linkUnderline: {
-    height: 1.2 * metrics.scaleCoefficient,
-    marginTop: 2 * metrics.scaleCoefficient,
+    height: 1.2 * helpers.metrics.scaleCoefficient,
+    marginTop: 2 * helpers.metrics.scaleCoefficient,
     alignSelf: 'stretch',
   },
   paddingLeft: {
-    paddingLeft: 10 * metrics.scaleCoefficient,
+    paddingLeft: 10 * helpers.metrics.scaleCoefficient,
   },
   paddingRight: {
-    paddingRight: 10 * metrics.scaleCoefficient,
+    paddingRight: 10 * helpers.metrics.scaleCoefficient,
   },
   noFullWidth: {
-    width: 170 * metrics.scaleCoefficient,
+    width: 170 * helpers.metrics.scaleCoefficient,
   },
 }));
 
-export const sizeStyles = StyleSheet.create({
+export const customSizeStyles = buildStyles((_, helpers) => ({
   large: {
     width: '100%',
-    minWidth: 170 * metrics.scaleCoefficient,
-    paddingVertical: 20 * metrics.scaleCoefficient,
-    borderRadius: 16 * metrics.scaleCoefficient,
-    paddingHorizontal: 16 * metrics.scaleCoefficient,
+    minWidth: 170 * helpers.metrics.scaleCoefficient,
+    paddingVertical: 20 * helpers.metrics.scaleCoefficient,
+    borderRadius: 16 * helpers.metrics.scaleCoefficient,
+    paddingHorizontal: 16 * helpers.metrics.scaleCoefficient,
   },
   medium: {
-    minWidth: 120 * metrics.scaleCoefficient,
-    paddingVertical: 10 * metrics.scaleCoefficient,
-    borderRadius: 12 * metrics.scaleCoefficient,
-    paddingHorizontal: 16 * metrics.scaleCoefficient,
+    minWidth: 120 * helpers.metrics.scaleCoefficient,
+    paddingVertical: 10 * helpers.metrics.scaleCoefficient,
+    borderRadius: 12 * helpers.metrics.scaleCoefficient,
+    paddingHorizontal: 16 * helpers.metrics.scaleCoefficient,
   },
   small: {
-    paddingVertical: 6 * metrics.scaleCoefficient,
-    borderRadius: 10 * metrics.scaleCoefficient,
-    paddingHorizontal: 10 * metrics.scaleCoefficient,
+    paddingVertical: 6 * helpers.metrics.scaleCoefficient,
+    borderRadius: 10 * helpers.metrics.scaleCoefficient,
+    paddingHorizontal: 10 * helpers.metrics.scaleCoefficient,
   },
-});
+}));
 
-export const fontSizeStyles = StyleSheet.create({
-  large: {
-    ...typography.cta,
-  },
-  medium: {
-    ...typography.cta,
-  },
-  small: {
-    ...typography.caption,
-  },
-});
+export const fontSizeStyles = {
+  large: 'medium-transparent-p',
+  medium: 'medium-transparent-p',
+  small: 'medium-transparent-span',
+};
 
 export const getContainerStyle = (
   colors: AppTheme['colors'],
@@ -154,9 +146,9 @@ export const getTextStyle = (
 ) => {
   if (icon && center) {
     if (iconPosition === 'left') {
-      return { right: 8 * metrics.scaleCoefficient };
+      return { right: 8 };
     } else if (iconPosition === 'right') {
-      return { left: 8 * metrics.scaleCoefficient };
+      return { left: 8 };
     }
   }
   return null;

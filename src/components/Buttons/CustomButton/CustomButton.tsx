@@ -1,32 +1,30 @@
 import React, { useCallback, useMemo } from 'react';
 import {
   TouchableOpacity,
-  Text,
   View,
   StyleProp,
   ViewStyle,
   TextStyle,
-  Pressable,
 } from 'react-native';
 import { SvgProps } from 'react-native-svg';
-import { LoadingDots } from '@/components';
+import { LoadingDots, Text } from '@/components';
 import {
   customButtonStyle,
   fontSizeStyles,
   getContainerStyle,
   getTextStyle,
-  sizeStyles,
-} from './customButton.style';
-import { metrics } from '@/theme';
-import Animated, { AnimatedStyle, SharedValue } from 'react-native-reanimated';
+  customSizeStyles,
+} from './styles';
+import metrics from '@/theme/metrics';
+import { AnimatedStyle, SharedValue } from 'react-native-reanimated';
 import { ButtonSize, ButtonTypes, IconPosition } from '../enum';
 import { getGradientsColors } from '../utils';
-import { ChevronRight } from '@//theme/svgs';
-import { Theme } from '@/core/@types/theme';
 import { useThemeContext } from '@/theme/ThemeProvider';
 import { useStyles } from '@/theme/hooks/useStyles';
 import { useButtonState } from '../hooks/useButtonState';
 import { addAlpha } from '@/utils/commons';
+import { Theme } from '@/theme/ThemeProvider/types';
+import { TextVariant } from '@/components/Text/types';
 
 export interface CustomButtonProps {
   label?: string;
@@ -69,8 +67,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   onPress,
   variant = ButtonTypes.PRIMARY,
   size = ButtonSize.LARGE,
-  animated = false,
-  containerStyleAnimated,
   titleStyleAnimated,
   theme,
   fullWidth = true,
@@ -85,6 +81,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   const { theme: themeContext } = useThemeContext();
   const colors = themeContext?.colors;
   const styles = useStyles(customButtonStyle);
+  const sizeStyles = useStyles(customSizeStyles);
   const buttonState = useButtonState(disabled, loading);
 
   const mainTitleColor = useMemo(() => {
@@ -114,7 +111,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     return [
       styles.title,
       { color: mainTitleColor },
-      fontSizeStyles[size],
       getTextStyle(centerLabel, iconPosition, Icon),
       titleStyle,
     ];
@@ -122,28 +118,21 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 
   const renderIcon = useCallback(() => {
     const leftIcon = iconPosition === IconPosition.LEFT;
-    if (Icon || animated) {
+    if (Icon) {
       return (
         <View
           style={[
             leftIcon ? styles.paddingRight : styles.paddingLeft,
             iconContainer,
           ]}>
-          {animated ? (
-            <ChevronRight
-              width={iconSize * metrics.scaleCoefficient}
-              height={iconSize * metrics.scaleCoefficient}
-              fill={iconColor ?? mainTitleColor}
-              stroke={iconStroke}
-            />
-          ) : (
+          {
             <Icon
               width={iconSize * metrics.scaleCoefficient}
               height={iconSize * metrics.scaleCoefficient}
               fill={iconColor ?? mainTitleColor}
               stroke={iconStroke}
             />
-          )}
+          }
         </View>
       );
     }
@@ -151,7 +140,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   }, [
     iconPosition,
     Icon,
-    animated,
     iconSize,
     iconColor,
     mainTitleColor,
@@ -185,13 +173,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({
               iconPosition === IconPosition.CENTER && styles.centerIcon,
             ]}>
             {iconPosition === IconPosition.CENTER && renderIcon()}
-            {animated ? (
-              <Animated.Text style={[textStyles, titleStyleAnimated]}>
+            {
+              <Text
+                variant={fontSizeStyles[size] as TextVariant}
+                style={textStyles}>
                 {label}
-              </Animated.Text>
-            ) : (
-              <Text style={textStyles}>{label}</Text>
-            )}
+              </Text>
+            }
             {iconPosition === IconPosition.CENTER_RIGHT && renderIcon()}
             {variant === ButtonTypes.LINK && !Icon ? (
               <View
@@ -214,7 +202,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     iconPosition,
     renderIcon,
     label,
-    animated,
     textStyles,
     titleStyleAnimated,
     mainTitleColor,
@@ -222,23 +209,6 @@ const CustomButton: React.FC<CustomButtonProps> = ({
     theme,
     contentContainerStyle,
   ]);
-
-  if (animated) {
-    return (
-      <Animated.View
-        style={[
-          { borderRadius: sizeStyles[size].borderRadius },
-          containerStyleAnimated,
-          styles.animatedContainer,
-        ]}>
-        <Pressable onPress={onPress} disabled={disabled || loading}>
-          <Animated.View style={[buttonStyles, containerStyleAnimated]}>
-            {renderContent()}
-          </Animated.View>
-        </Pressable>
-      </Animated.View>
-    );
-  }
 
   return (
     <TouchableOpacity

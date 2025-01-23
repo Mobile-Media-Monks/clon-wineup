@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-import styles from './loadingDots.style';
+import componentStyles from './styles';
 import { getGradientsColors } from '../Buttons/utils';
 import { ButtonTypes } from '../Buttons/enum';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { useThemeContext } from '@/theme/ThemeProvider';
+import { useStyles } from '@/theme/hooks/useStyles';
 
 interface LoadingDotsProps {
   containerStyle?: StyleProp<ViewStyle>;
@@ -20,7 +21,9 @@ const LoadingDots: React.FC<LoadingDotsProps> = ({
   loading,
 }) => {
   const { theme: themeContext } = useThemeContext();
+  const styles = useStyles(componentStyles);
   const colors = themeContext?.colors;
+
   const loadingColors =
     loadingGradientColors ??
     getGradientsColors(colors, Theme.WINE, ButtonTypes.PRIMARY);

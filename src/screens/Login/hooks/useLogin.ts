@@ -2,7 +2,7 @@
 import { useState, useMemo, useCallback } from 'react';
 import { DISABLED } from '@/components/FormInput/constants';
 import { NavigationProp, ParamListBase } from '@react-navigation/native';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useThemeContext } from '@/theme/ThemeProvider';
 import { LoginData } from '../types';

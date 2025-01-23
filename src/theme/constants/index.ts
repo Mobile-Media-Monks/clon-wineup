@@ -186,6 +186,18 @@ const mainTheme: AppTheme = {
       medium: 'Quicksand-Medium',
       semiBold: 'Quicksand-SemiBold',
     },
+    onest: {
+      regular: 'Onest-Regular',
+      black: 'Onest-Black',
+      bold: 'Onest-Bold',
+      extraBold: 'Onest-ExtraBold',
+      extraLight: 'Onest-ExtraLight',
+      light: 'Onest-Light',
+      medium: 'Onest-Medium',
+      semiBold: 'Onest-SemiBold',
+      thin: 'Onest-Thin',
+      variable: 'Onest',
+    },
   },
 };
 

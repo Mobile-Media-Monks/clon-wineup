@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import CustomTextInput from '@/components/FormInput/components/CustomTextInput';
 import { FormInputTypes } from '@/components/FormInput/enum';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 
 interface FormInputProps<T extends FieldValues> {
   control: Control<T>;

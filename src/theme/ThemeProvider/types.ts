@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import metrics from '../metrics';
 
 export enum ThemeVariant {
   default,
@@ -19,6 +20,7 @@ export type StyleHelper = {
   //   mv: (value: number) => number;
   //   mh: (value: number) => number;
   // };
+  metrics: typeof metrics;
 };
 
 export type StyleBuilder<R> = (
@@ -71,13 +73,13 @@ export type AppTheme = {
     };
     gradient: {
       wine0: string[];
-      wine1: [string, string];
-      wine2: [string, string];
-      wine3: [string, string];
-      leaf1: [string, string];
-      leaf2: [string, string];
-      leaf3: [string, string];
-      wood1: [string, string];
+      wine1: string[];
+      wine2: string[];
+      wine3: string[];
+      leaf1: string[];
+      leaf2: string[];
+      leaf3: string[];
+      wood1: string[];
       theme: {
         wood: GradientQuestionOption;
         wine: GradientQuestionOption;
@@ -90,7 +92,7 @@ export type AppTheme = {
     };
     backButton: string;
     transparent: string;
-    stackCards: Record<string, [string, string]>;
+    stackCards: Record<string, string[]>;
     wineJourney: {
       locked: {
         wine: string;
@@ -117,7 +119,7 @@ export type AppTheme = {
       };
       bonusTriviaButton: string;
     };
-    imageOverlay: [string, string];
+    imageOverlay: string[];
     overlay: string;
     searchWineIcon: string;
   };
@@ -131,6 +133,18 @@ export type AppTheme = {
       light: string;
       medium: string;
       semiBold: string;
+    };
+    onest: {
+      regular: string;
+      black: string;
+      bold: string;
+      extraBold: string;
+      extraLight: string;
+      light: string;
+      medium: string;
+      semiBold: string;
+      thin: string;
+      variable: string;
     };
   };
 };
@@ -162,3 +176,15 @@ type WineJourneyPlayColors = {
   centerStart: string;
   centerEnd: string;
 };
+
+export enum Theme {
+  LEAF = 'leaf',
+  WINE = 'wine',
+  WOOD = 'wood',
+  WHITE = 'white',
+}
+
+export enum TypeTheme {
+  LIGHT = 'light',
+  DARK = 'dark',
+}

@@ -21,8 +21,8 @@ import {
   DISABLED,
   TEXT_OPACITY,
 } from '@/components/FormInput/constants';
-import componentStyle from './customTextInput.style';
-import { Theme } from '@/core/@types/theme';
+import componentStyle from './styles';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useStyles } from '@/theme/hooks/useStyles';
 import { useThemeContext } from '@/theme/ThemeProvider';

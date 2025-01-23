@@ -5,7 +5,7 @@ import ChevronRight from '@/assets/svgs/chevron_right.svg';
 import ChevronLeft from '@/assets/svgs/chevron_left.svg';
 import CheckCircle from '@/assets/svgs/check_circle.svg';
 import Search from '@/assets/svgs/search.svg';
-import EyeSlash from '@/assets/svgs/eye_slash.svg';
+import EyeSlash from '@/assets/svgs/EyeSlash';
 import Eye from '@/assets/svgs/Eye';
 import InputError from '@/assets/svgs/input_error.svg';
 import Reload from '@assets/svgs/reload.svg';

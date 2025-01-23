@@ -5,7 +5,6 @@ import * as yup from 'yup';
 import validator from 'validator';
 import { t } from 'i18next';
 import { LoginData } from '../types';
-import { useThemeContext } from '@/theme/ThemeProvider';
 import { TextInput } from 'react-native';
 
 const LoginFormSchema = yup.object().shape({
@@ -25,8 +24,6 @@ export const useLoginForm = (
   setFormError: boolean,
   handleLogin: (data: LoginData) => void,
 ) => {
-  const { theme: themeContext } = useThemeContext();
-  const colors = themeContext?.colors;
   const inputRefs = useRef<Record<keyof LoginData, TextInput | null>>({
     email: null,
     password: null,
@@ -72,7 +69,6 @@ export const useLoginForm = (
   }, []);
 
   return {
-    colors,
     control,
     errors,
     inputRefs,

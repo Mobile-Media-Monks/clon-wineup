@@ -8,18 +8,18 @@ import {
 } from 'react-native';
 import { SvgProps, SvgUri } from 'react-native-svg';
 import { LoadingDots } from '@/components';
-import styles, {
+import iconButtonStyles, {
   getContainerStyle,
   getIconColor,
-  sizeStyles,
-} from './IconButton.style';
-import { metrics } from '@/theme';
+  customSizeStyles,
+} from './styles';
 import Animated, { AnimatedStyle } from 'react-native-reanimated';
 import { IconButtonSize, IconButtonType } from '../enum';
 import { getGradientsColors } from '../utils';
-import { Theme } from '@/core/@types/theme';
 import { useThemeContext } from '@/theme/ThemeProvider';
 import { useButtonState } from '../hooks/useButtonState';
+import { Theme } from '@/theme/ThemeProvider/types';
+import { useStyles } from '@/theme/hooks/useStyles';
 
 interface IconButtonProps {
   icon: React.FC<SvgProps> | string;
@@ -56,6 +56,8 @@ const IconButton: React.FC<IconButtonProps> = ({
 }) => {
   const { theme: themeContext } = useThemeContext();
   const colors = themeContext?.colors;
+  const styles = useStyles(iconButtonStyles);
+  const sizeStyles = useStyles(customSizeStyles);
   const buttonState = useButtonState(disabled, loading);
 
   const buttonStyles = useMemo(() => {
@@ -70,18 +72,12 @@ const IconButton: React.FC<IconButtonProps> = ({
   const renderIcon = useCallback(() => {
     if (Icon) {
       if (typeof Icon === 'string') {
-        return (
-          <SvgUri
-            width={iconSize * metrics.scaleCoefficient}
-            height={iconSize * metrics.scaleCoefficient}
-            uri={Icon}
-          />
-        );
+        return <SvgUri width={iconSize} height={iconSize} uri={Icon} />;
       } else {
         return (
           <Icon
-            width={iconSize * metrics.scaleCoefficient}
-            height={iconSize * metrics.scaleCoefficient}
+            width={iconSize}
+            height={iconSize}
             fill={
               iconColor ?? getIconColor(colors, theme, variant, buttonState)
             }

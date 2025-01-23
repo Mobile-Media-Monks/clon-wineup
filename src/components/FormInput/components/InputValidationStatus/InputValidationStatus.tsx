@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Animated } from 'react-native';
+import { View, Animated } from 'react-native';
 import { Reload, InputErrorRounded } from '@/theme/svgs';
 import { metrics } from '@/theme';
-// import { FieldError, FieldErrorsImpl, Merge } from 'react-hook-form';
-import componentStyle from './inputValidationStatus.style';
-import { Theme } from '@/core/@types/theme';
+import componentStyle from './styles.ts';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useStyles } from '@/theme/hooks/useStyles';
 import { t } from 'i18next';
 import { useThemeContext } from '@/theme/ThemeProvider';
 import { ErrorMessageType } from '../../types';
+import { Text } from '@/components';
 
 interface InputValidationStatusProps {
   theme: Theme;
@@ -60,6 +60,7 @@ const InputValidationStatus: React.FC<InputValidationStatusProps> = ({
                 />
               </Animated.View>
               <Text
+                variant="medium-error-span"
                 style={[
                   styles.validating,
                   {
@@ -75,7 +76,7 @@ const InputValidationStatus: React.FC<InputValidationStatusProps> = ({
       {errorMessage && (
         <View style={styles.rowContainer}>
           <InputErrorRounded />
-          <Text style={styles.errorMessage}>
+          <Text variant="medium-error-span" style={styles.errorMessage}>
             {errorMessage ? getErrorMessage(errorMessage) : null}
           </Text>
         </View>

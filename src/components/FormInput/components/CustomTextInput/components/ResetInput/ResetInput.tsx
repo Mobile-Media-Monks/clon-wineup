@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { InputError } from '@/theme/svgs';
 import { FormInputTypes } from '@/components/FormInput/enum';
-import { Theme } from '@/core/@types/theme';
+import { Theme } from '@/theme/ThemeProvider/types';
 import { useThemeContext } from '@/theme/ThemeProvider';
 
 interface ResetInputProps {
