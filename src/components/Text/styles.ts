@@ -4,7 +4,7 @@ import { TextStyleVariant } from './types';
 
 export const styles = buildStyles<{
   [key in TextStyleVariant]: TextStyle;
-}>(theme => ({
+}>((theme, helpers) => ({
   h1: {
     fontSize: 50,
   },
@@ -15,18 +15,25 @@ export const styles = buildStyles<{
     fontSize: 26,
   },
   h4: {
-    fontSize: 20,
+    fontSize: 20 * helpers.metrics.scaleCoefficient,
+    lineHeight: 24 * helpers.metrics.scaleCoefficient,
   },
   h5: {
-    fontSize: 16,
+    fontSize: 16 * helpers.metrics.scaleCoefficient,
+    lineHeight: 20 * helpers.metrics.scaleCoefficient,
   },
   p: {
-    fontSize: 14,
+    fontSize: 14 * helpers.metrics.scaleCoefficient,
+    lineHeight: 18 * helpers.metrics.scaleCoefficient,
   },
   span: {
-    fontSize: 12,
+    fontSize: 12 * helpers.metrics.scaleCoefficient,
+    lineHeight: 14 * helpers.metrics.scaleCoefficient,
   },
   primary: {},
+  wineFour: {
+    color: theme.colors.theme.wine.four,
+  },
   title: {
     fontWeight: '600',
     fontFamily: theme.typography.quicksand.bold,
@@ -39,7 +46,14 @@ export const styles = buildStyles<{
     fontWeight: '500',
     fontFamily: theme.typography.quicksand.light,
   },
+  medium: {
+    fontFamily: theme.typography.onest.medium,
+    textTransform: 'none',
+  },
   white: {},
-  error: {},
+  error: {
+    color: theme.colors.secondary.error,
+  },
   gray: {},
+  transparent: {},
 }));

@@ -9,6 +9,7 @@ import { useContext, useMemo } from 'react';
 
 import { Context } from '../constants';
 import { StyleBuilder, StyleHelper } from '../ThemeProvider/types';
+import metrics from '../metrics';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -25,6 +26,7 @@ const STYLE_HELPERS: StyleHelper = {
       paddingHorizontal: 16,
     },
   },
+  metrics,
 };
 
 export function useStyles<T extends StyleBuilder<ReturnType<T>>>(

@@ -1,14 +1,33 @@
 {
-    "home": {
-        "title": "Home",
-        "greeting": "Hi {{name}}!"
-    },
-    "countries":{
-        "region":"Region",
-        "capital":"Capital",
-        "population":"Population",
-        "languages":"Languages",
-        "area":"Area"
+  "home": {
+    "title": "Home",
+    "greeting": "Hi {{name}}!"
+  },
+  "countries": {
+    "region": "Region",
+    "capital": "Capital",
+    "population": "Population",
+    "languages": "Languages",
+    "area": "Area"
+  },
+  "login": {
+    "title": "Sign in",
+    "loginForm": {
+      "submitBtn": "Continue",
+      "emailRecovery": "Recover Password",
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "description": "E.g. hello@wineup.world",
+        "invalid": "The email format is invalid. Can you check it?",
+        "required": "Email is required"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "required": "Password is required"
+      },
+      "wrongEmailPassword": "Invalid email and password"
     }
-        
+  }
 }

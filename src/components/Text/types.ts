@@ -1,7 +1,13 @@
 import { TextProps } from 'react-native';
 
-export type TextColorVariant = 'primary' | 'white' | 'error' | 'gray';
-export type TextFontVariant = 'title' | 'subtitle' | 'regular';
+export type TextColorVariant =
+  | 'primary'
+  | 'white'
+  | 'error'
+  | 'gray'
+  | 'wineFour'
+  | 'transparent';
+export type TextFontVariant = 'title' | 'subtitle' | 'regular' | 'medium';
 export type TextFontSizeVariant =
   | 'h1'
   | 'h2'
