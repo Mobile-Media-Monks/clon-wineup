@@ -13,7 +13,8 @@ import Screens from '@/navigation/screens';
  */
 export type RootNavigation = {
   [Screens.Splash]: undefined;
-  [Screens.InitStack]: undefined;
+  [Screens.AuthStack]: undefined;
+  [Screens.HomeStack]: undefined;
 };
 
 /**

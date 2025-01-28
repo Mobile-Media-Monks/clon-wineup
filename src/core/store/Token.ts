@@ -21,6 +21,9 @@ export default class ZustandTokenDataStoreImpl
     return this.store.getState();
   }
 
+  public getReactiveToken(): TokenDataStoreState {
+    return this.useStore(state => state);
+  }
   public async saveToken(token?: TokenDataStoreState) {
     this.store.setState(token ?? {});
   }

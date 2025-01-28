@@ -1,7 +1,5 @@
 import React from 'react';
 import { Image, ImageStyle, View } from 'react-native';
-import { ScreenProps } from '@/navigation/types';
-import Screens from '@navigation/screens';
 import Divider from './components/Divider/Divider';
 import Header from './components/Header/Header';
 import { GradientBackground } from '@/components';
@@ -13,15 +11,9 @@ import { t } from 'i18next';
 import loginStyle from './styles';
 import { useStyles } from '@/theme/hooks/useStyles';
 
-type LoginProps = ScreenProps<Screens.Login>;
-
-const Login = ({ navigation }: LoginProps) => {
+const Login = () => {
   const styles = useStyles(loginStyle);
-  const {
-    isHandlingLogin,
-    firebaseEmailLoginError,
-    handleLoginWithEmailAndPassword,
-  } = useLogin(navigation);
+  const { isHandlingLogin, handleLoginWithEmailAndPassword } = useLogin();
 
   return (
     <View style={styles.container}>
@@ -36,7 +28,7 @@ const Login = ({ navigation }: LoginProps) => {
           theme={Theme.WINE}
           isHandlingLogin={isHandlingLogin}
           handleLogin={handleLoginWithEmailAndPassword}
-          setFormError={firebaseEmailLoginError}
+          setFormError={false}
         />
         <Divider />
       </View>

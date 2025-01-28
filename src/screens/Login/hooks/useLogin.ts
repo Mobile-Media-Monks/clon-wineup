@@ -1,15 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState, useMemo, useCallback } from 'react';
+import { useMemo, useCallback } from 'react';
 import { DISABLED } from '@/components/FormInput/constants';
-import { NavigationProp, ParamListBase } from '@react-navigation/native';
 import { Theme } from '@/theme/ThemeProvider/types';
 import { addAlpha } from '@/utils/commons';
 import { useThemeContext } from '@/theme/ThemeProvider';
 import { LoginData } from '../types';
+import { useAuth } from '@/hooks/useAuth';
 
-export const useLogin = (navigation: NavigationProp<ParamListBase>) => {
-  const isHandlingLogin = false;
-  const [firebaseEmailLoginError, setFirebaseEmailLoginError] = useState(false);
+export const useLogin = () => {
+  const { login, loading: isHandlingLogin } = useAuth();
   const { theme: themeContext } = useThemeContext();
   const colors = themeContext?.colors;
 
@@ -21,16 +19,12 @@ export const useLogin = (navigation: NavigationProp<ParamListBase>) => {
     [isHandlingLogin],
   );
 
-  const handleLoginWithEmailAndPassword = useCallback(
-    async (data: LoginData) => {
-      // TODO
-    },
-    [],
-  );
+  const handleLoginWithEmailAndPassword = useCallback((data: LoginData) => {
+    login(data.email, data.password);
+  }, []);
 
   return {
     isHandlingLogin,
-    firebaseEmailLoginError,
     loginMethodNameColor,
     handleLoginWithEmailAndPassword,
   };

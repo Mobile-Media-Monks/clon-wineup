@@ -1,5 +1,6 @@
 enum Screens {
-  InitStack = 'InitStack',
+  AuthStack = 'AuthStack',
+  HomeStack = 'HomeStack',
   Splash = 'Splash',
   Home = 'Home',
   Login = 'Login',

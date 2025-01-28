@@ -11,4 +11,8 @@ export class TokenRepositoryImpl implements TokenRepository {
   saveToken(token: TokenDataStoreState) {
     this.tokenDataStore.saveToken(token);
   }
+
+  getReactiveToken(): TokenDataStoreState | undefined {
+    return this.tokenDataStore.getReactiveToken();
+  }
 }
