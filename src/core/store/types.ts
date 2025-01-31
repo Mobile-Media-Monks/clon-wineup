@@ -15,7 +15,7 @@ export interface TokenDataStoreState {
 
 export type TokenDataStore = ZustandDataStore<TokenDataStoreState> & {
   getToken(): TokenDataStoreState | undefined;
-  getReactiveToken(): TokenDataStoreState | undefined;
+  getCurrentUserSelector(): CurrentUser | undefined;
   saveToken(token?: TokenDataStoreState): Promise<void>;
   clearToken(): Promise<void>;
 };

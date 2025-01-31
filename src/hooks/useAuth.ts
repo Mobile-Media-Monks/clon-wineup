@@ -4,7 +4,8 @@ import { useCallback, useState } from 'react';
 
 export const useAuth = () => {
   const [loading, setLoading] = useState<boolean>(false);
-  const user = repositories.tokens.getReactiveToken();
+  const user = repositories.tokens.getCurrentUserSelector();
+
   const login = useCallback(async (email: string, password: string) => {
     setLoading(true);
     try {

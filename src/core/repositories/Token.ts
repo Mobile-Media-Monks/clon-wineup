@@ -1,4 +1,8 @@
-import { TokenDataStore, TokenDataStoreState } from '../store/types';
+import {
+  CurrentUser,
+  TokenDataStore,
+  TokenDataStoreState,
+} from '../store/types';
 import { TokenRepository } from './types';
 
 export class TokenRepositoryImpl implements TokenRepository {
@@ -12,7 +16,7 @@ export class TokenRepositoryImpl implements TokenRepository {
     this.tokenDataStore.saveToken(token);
   }
 
-  getReactiveToken(): TokenDataStoreState | undefined {
-    return this.tokenDataStore.getReactiveToken();
+  getCurrentUserSelector(): CurrentUser | undefined {
+    return this.tokenDataStore.getCurrentUserSelector();
   }
 }
