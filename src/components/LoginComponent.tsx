@@ -14,9 +14,9 @@ const LoginComponent = () => {
 
   return (
     <View>
-      {user?.current_user?.name ? (
+      {user?.name ? (
         <View>
-          <Text variant="title-primary-h5">{`User ${user?.current_user?.name} Logged in`}</Text>
+          <Text variant="title-primary-h5">{`User ${user?.name} Logged in`}</Text>
           <Button title="Logout" onPress={logout} />
         </View>
       ) : (
