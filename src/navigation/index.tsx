@@ -1,11 +1,10 @@
 import React from 'react';
+import Routes from './routes';
+import Screens from './screens';
+import { useAuth } from '@/hooks/useAuth';
+import { AuthStack, HomeStack } from './types';
 import { RootNavigation } from '@/core/@types/navigation';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Screens from './screens';
-import Routes from './routes';
-
-import { AuthStack, HomeStack } from './types';
-import { useAuth } from '@/hooks/useAuth';
 
 const RootNavigationStack = createNativeStackNavigator<RootNavigation>();
 
@@ -36,11 +35,10 @@ const HomeStackNavigator = () => {
 
 export default function AppNavigation() {
   const { user } = useAuth();
-  const isAuthenticated = Boolean(user?.current_user);
 
   return (
     <RootNavigationStack.Navigator screenOptions={{ headerShown: false }}>
-      {isAuthenticated ? (
+      {user ? (
         <RootNavigationStack.Screen
           name={Screens.HomeStack}
           component={HomeStackNavigator}

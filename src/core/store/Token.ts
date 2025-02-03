@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { TokenDataStore, TokenDataStoreState } from './types';
+import { CurrentUser, TokenDataStore, TokenDataStoreState } from './types';
 import ZustandDataStore from './commons';
 
 export default class ZustandTokenDataStoreImpl
@@ -21,9 +21,10 @@ export default class ZustandTokenDataStoreImpl
     return this.store.getState();
   }
 
-  public getReactiveToken(): TokenDataStoreState {
-    return this.useStore(state => state);
+  public getCurrentUserSelector(): CurrentUser | undefined {
+    return this.useStore(state => state?.current_user);
   }
+
   public async saveToken(token?: TokenDataStoreState) {
     this.store.setState(token ?? {});
   }
